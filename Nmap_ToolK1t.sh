@@ -90,6 +90,7 @@ update_toolkit()
   banner
   update_file=$(pwd)
   version_check=$(cat Version.md)
+  echo " "
   echo $'\e[1;92m[\e[0m\e[1;77m |\/| \e[0m\e[1;92m] Gathering Resources...  \e[0m'
   sleep 2
   echo $'\e[1;92m[\e[0m\e[1;77m |/\| \e[0m\e[1;92m] Connecting to Github  \e[0m'
@@ -103,7 +104,7 @@ update_toolkit()
     echo $'\e[1;92m[\e[0m\e[1;77m |\/| \e[0m\e[1;92m] Loading Nmap_ToolK1t home screen  \e[0m'
     echo $'\e[1;92m[\e[0m\e[1;77m |/\| \e[0m\e[1;91m] ===========================================  \e[0m'
     rm -rf Nmap_ToolK1t
-    sleep 10
+    sleep 8
     banner
     user_input
   else
