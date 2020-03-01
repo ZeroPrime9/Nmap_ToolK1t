@@ -1,10 +1,13 @@
+![Nmap_ToolK1t Screenshot](Nmap_ToolK1t-Screenshot.png)
+
 # Nmap_ToolK1t
+
 Nmap made simpler with multiple scan techniques and more
 
-### Give credits when copying the code, it would be appreciated.
+### It would be appreciated if you gave credit when redistributing versions of this code, modified or unmodified, source code or executable :)
 
 ## ABOUT:
-Nmap_ToolK1t is an automated scanner that can be used during a penetration test to enumerate and scan for vulnerabilities. This tool is made for making Nmap scans simpler and automated depending on user preference.
+Nmap_ToolK1t is an automated scanner that can be used during a penetration test to enumerate and scan for vulnerabilities. This tool is made for making Nmap scans simpler and automated, depending on user preference.
 
 ## Getting Started:
 ```
@@ -12,19 +15,17 @@ git clone https://github.com/ZeroPrime9/Nmap_ToolK1t
 cd Nmap_ToolK1t
 bash Nmap_ToolK1t.sh
 ```
+
 ## Prerequisites:
 
 First of all, you should get the “nmap” package installed in your system.
+
 ```
 On Cent OS
 yum install nmap
 ```
 ```
-On Debian
-apt-get install nmap
-```
-```
-On Ubuntu
+On Debian / Ubuntu
 apt-get install nmap
 ```
 ## Features:
@@ -34,7 +35,7 @@ apt-get install nmap
 
 ## Purpose:
 
-The whole reason for using making this tool, is to make reconnaissance simpler and making things faster. As this is still in V1.0 there is only basic scans techniques. More scans will be added and it would be made more easier to automate in time.
+The whole reason for using making this tool, is to make reconnaissance simpler and making things faster. As this is still in V1.0 there are only basic scans techniques. More scans will be added and over time automation will be made more and more easier.
 
 All the scans made are stored in Scanned_Target directory.
 
@@ -48,13 +49,12 @@ Permissions of this strong copyleft license are conditioned on making available 
 See the [CHANGELOG.md](CHANGELOG.md) file for Version history and changes.
 
 ## Issues
-For Non-Kali users, The allignment of the text is found to be a problem. A new repositary will be made in time for using this tool without any problem.
-
+There are some known issues found in machines in linux distributions other than Kali, an update is planned for the purpose of fixing these issues.
 
 ## Authors:
 
 * **Zero_Prime9** - *Initial work* -(https://github.com/ZeroPrime9)
 
 ## Donation:
-Any type of donation would be accepted, Working on an Open Source tool requires a lot of time and dedication. So if you are willing to share $1 or more it would be really appreciated
+Any type of donation would be accepted, Working on an Open Source tool requires a lot of time and dedication. So if you are willing to share $1 or more it would really be appreciated
 https://www.paypal.me/fz2050
