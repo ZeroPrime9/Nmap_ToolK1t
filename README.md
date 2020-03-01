@@ -47,6 +47,9 @@ Permissions of this strong copyleft license are conditioned on making available 
 ## Changelogs
 See the [CHANGELOG.md](CHANGELOG.md) file for Version history and changes.
 
+## Issues
+For Non-Kali users, The allignment of the text is found to be a problem. A new repositary will be made in time for using this tool without any problem.
+
 
 ## Authors
 
