@@ -4,7 +4,7 @@
 banner() # Introduction Banner
 {
   clear
-  version_check="1.1.0"
+  version_check="1.1.1"
   printf "\e[1;77m _        _______  _______  _______ _________ _______  _______  _        _        __ _________ \e[0m\n"
   printf "\e[1;77m( (    /|(       )(  ___  )(  ____ )\__   __/(  ___  )(  ___  )( \      | \    /\/  \\__   __/ \e[0m\n"
   printf "\e[1;77m|  \  ( || () () || (   ) || (    )|   ) (   | (   ) || (   ) || (      |  \  / /\/) )  ) ( \e[0m\n"
@@ -69,7 +69,7 @@ user_input() # For selecting different type of scans
     echo $'\e[1;91m Nmap NetBios Scan will come up in the next update Follow me in Instagram @Zero_Prime9 for more details\e[0m'
   elif [ "$Choice" == "6" ]
    then
-    update
+    update_toolkit
   elif [ "$Choice" == "7" ]
    then
     echo $'\e[1;91m Have fun Hacking, Cheers Zero_Prime9 :)\e[0m'
@@ -85,7 +85,7 @@ user_input() # For selecting different type of scans
   echo $'\e[1;92m More the information, Easier the attack \e[0m'
 }
 
-update()
+update_toolkit()
 {
   echo $'\e[1;92m[\e[0m\e[1;77m |\/| \e[0m\e[1;92m] Updating Nmap ToolKit  \e[0m'
   echo $'\e[1;92m[\e[0m\e[1;77m |/\| \e[0m\e[1;92m] Gathering Resources...  \e[0m'
