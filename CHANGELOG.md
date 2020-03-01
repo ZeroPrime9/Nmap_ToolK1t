@@ -1,5 +1,11 @@
 # CHANGELOG
 
+##V1.1.3
+- V1.1.3 Fixed the bug where the latest version was not displaying while updating.
+- V1.1.3 More patches and changes in Update Branch.
+- V1.1.3 Added transition from updated branch to the latest build of the tool.
+- V1.1.3 Minor Bugs fixed.
+
 ##V1.1.2
 - V1.1.2 Patched Alignment issue in other Operating system.
 - V1.1.2 Patched issue when running as a non-root user.
