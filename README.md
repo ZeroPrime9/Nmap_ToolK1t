@@ -1,4 +1,4 @@
-![Nmap_ToolK1t Screenshot](Nmap_ToolK1t-Screenshot.png)
+![Nmap_ToolK1t Screenshot](Screenshots/Nmap_ToolK1t-Screenshot.png)
 
 # Nmap_ToolK1t
 
