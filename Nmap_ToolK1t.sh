@@ -5,34 +5,34 @@ banner() # Introduction Banner
 {
   clear
   version_check=$(cat Version.md)
-  printf "\e[1;77m _        _______  _______  _______ _________ _______  _______  _        _        __ _________ \e[0m\n"
-  printf "\e[1;77m( (    /|(       )(  ___  )(  ____ )\__   __/(  ___  )(  ___  )( \      | \    /\/  \\__   __/ \e[0m\n"
-  printf "\e[1;77m|  \  ( || () () || (   ) || (    )|   ) (   | (   ) || (   ) || (      |  \  / /\/) )  ) ( \e[0m\n"
-  printf "\e[1;77m|   \ | || || || || (___) || (____)|   | |   | |   | || |   | || |      |  (_/ /   | |  | | \e[0m\n"
-  printf "\e[1;77m| (\ \) || |(_)| ||  ___  ||  _____)   | |   | |   | || |   | || |      |   _ (    | |  | | \e[0m\n"
-  printf "\e[1;77m| | \   || |   | || (   ) || (         | |   | |   | || |   | || |      |  ( \ \   | |  | | \e[0m\n"
-  printf "\e[1;77m| )  \  || )   ( || )   ( || )         | |   | (___) || (___) || (____/\|  /  \ \__) (_ | | \e[0m\n"
-  printf "\e[1;77m|/    )_)|/     \||/     \||/_____     )_(   (_______)(_______)(_______/|_/    \/\____/ )_( \e[0m\n"
+  printf "\e[1;77m    _        _______  _______  _______ _________ _______  _______  _        _        __ _________ \e[0m\n"
+  printf "\e[1;77m   ( (    /|(       )(  ___  )(  ____ )\__   __/(  ___  )(  ___  )( \      | \    /\/  \\__   __/ \e[0m\n"
+  printf "\e[1;77m   |  \  ( || () () || (   ) || (    )|   ) (   | (   ) || (   ) || (      |  \  / /\/) )  ) ( \e[0m\n"
+  printf "\e[1;77m   |   \ | || || || || (___) || (____)|   | |   | |   | || |   | || |      |  (_/ /   | |  | | \e[0m\n"
+  printf "\e[1;77m   | (\ \) || |(_)| ||  ___  ||  _____)   | |   | |   | || |   | || |      |   _ (    | |  | | \e[0m\n"
+  printf "\e[1;77m   | | \   || |   | || (   ) || (         | |   | |   | || |   | || |      |  ( \ \   | |  | | \e[0m\n"
+  printf "\e[1;77m   | )  \  || )   ( || )   ( || )         | |   | (___) || (___) || (____/\|  /  \ \__) (_ | | \e[0m\n"
+  printf "\e[1;77m   |/    )_)|/     \||/     \||/_____     )_(   (_______)(_______)(_______/|_/    \/\____/ )_( \e[0m\n"
   printf "\e[1;77m                            (_____)                                                        \e[0m\n"
   printf "\n"
-  printf "\e[1;93m      ..:..               Recon tool created by: Farzan Nobi [Zero_Prime9]         ..:..\e[0m\n"
-  printf "\e[1;91m      ..:..                            Version: $version_check                             ..:..\e[0m\n"
-  printf "\e[1;93m      ..:..                   Follow me on Instagram: @Zero_Prime9                 ..:..\e[0m\n"
-  printf "\e[1;93m      ..:..             Github: https://www.github.com/ZeroPrime9/Nmap_ToolK1t     ..:..\e[0m\n"
-  printf "\e[1;93m      ..:..                        Welcome to Nmap ToolKit                         ..:..\e[0m\n"
+  printf "\e[1;93m          ..:..           Recon tool created by: Farzan Nobi [Zero_Prime9]         ..:..\e[0m\n"
+  printf "\e[1;91m          ..:..                        Version: $version_check                             ..:..\e[0m\n"
+  printf "\e[1;93m          ..:..               Follow me on Instagram: @Zero_Prime9                 ..:..\e[0m\n"
+  printf "\e[1;93m          ..:..         Github: https://www.github.com/ZeroPrime9/Nmap_ToolK1t     ..:..\e[0m\n"
+  printf "\e[1;93m          ..:..                    Welcome to Nmap ToolKit                         ..:..\e[0m\n"
   printf "\n"
-  printf "  \e[1;31m                  :: Disclaimer: Developers assume no liability    ::\e[0m\n"
-  printf "  \e[1;31m                  :: Search your victim, before you annihilate ;)  ::\e[0m\n"
+  printf "  \e[1;31m                      :: Disclaimer: Developers assume no liability    ::\e[0m\n"
+  printf "  \e[1;31m                      :: Search your victim, before you annihilate ;)  ::\e[0m\n"
 
 
   #Checking if the directory exists or not.
   file_loc="Scanned_Target"
   if [ -e $file_loc ]
   then
-     echo $'  \e[1;32m                  ::        Check Scanned_Target for logs          ::\e[0m'
+     echo $'  \e[1;32m                      ::        Check Scanned_Target for logs          ::\e[0m'
   else
       mkdir Scanned_Target
-      echo $'  \e[1;32m                  ::        File Scanned_Target created            ::\e[0m'
+      echo $'  \e[1;32m                      ::        File Scanned_Target created            ::\e[0m'
   fi
 }
 
@@ -94,6 +94,7 @@ update_toolkit()
   echo $'\e[1;92m[\e[0m\e[1;77m |\/| \e[0m\e[1;92m] Gathering Resources...  \e[0m'
   sleep 2
   echo $'\e[1;92m[\e[0m\e[1;77m |/\| \e[0m\e[1;92m] Connecting to Github  \e[0m'
+  echo " "
   git clone https://github.com/ZeroPrime9/Nmap_ToolK1t.git
   version_recheck=$(cat Nmap_ToolK1t/Version.md)
   if [ "$version_check" == "$version_recheck" ]
