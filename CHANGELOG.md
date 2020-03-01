@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## V1.1.1
+- V1.1.1 Patched changes in the Update branch
+
 ## V1.1.0
 - V1.1.0 Added Update Branch.
 - V1.1.0 Added Quit Branch
