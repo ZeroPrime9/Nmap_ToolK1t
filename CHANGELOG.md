@@ -13,3 +13,5 @@
 - V1.0 Upgraded User Interface
 - V1.0 More Scan Branches added.
 
+## V1.0.1:
+- V1.0.1 Fixed bugs
