@@ -15,10 +15,10 @@ banner() # Introduction Banner
   printf "\e[1;77m|/    )_)|/     \||/     \||/_____     )_(   (_______)(_______)(_______/|_/    \/\____/ )_( \e[0m\n"
   printf "\e[1;77m                            (_____)                                                        \e[0m\n"
   printf "\n"
-  printf "\e[1;93m      ..:..        Recon tool created by: Farzan Mohammed [Zero_Prime9]            ..:..\e[0m\n"
-  printf "\e[1;91m      ..:..                            Version:\e[1;91 $version_check                               ..:..\e[0m\n"
-  printf "\e[1;93m      ..:..        Follow me on Instagram: \e[1;92 @Zero_Prime9                            ..:..\e[0m\n"
-  printf "\e[1;93m      ..:..        Github: \e[1;92 https://www.github.com/ZeroPrime9/Nmap_ToolK1t          ..:..\e[0m\n"
+  printf "\e[1;93m      ..:..               Recon tool created by: Farzan Nobi [Zero_Prime9]         ..:..\e[0m\n"
+  printf "\e[1;91m      ..:..                            Version: $version_check                             ..:..\e[0m\n"
+  printf "\e[1;93m      ..:..                   Follow me on Instagram: @Zero_Prime9                 ..:..\e[0m\n"
+  printf "\e[1;93m      ..:..             Github: https://www.github.com/ZeroPrime9/Nmap_ToolK1t     ..:..\e[0m\n"
   printf "\e[1;93m      ..:..                        Welcome to Nmap ToolKit                         ..:..\e[0m\n"
   printf "\n"
   printf "  \e[1;31m                  :: Disclaimer: Developers assume no liability    ::\e[0m\n"
@@ -87,27 +87,46 @@ user_input() # For selecting different type of scans
 
 update_toolkit()
 {
-  echo $'\e[1;92m[\e[0m\e[1;77m |\/| \e[0m\e[1;92m] Updating Nmap ToolKit  \e[0m'
-  echo $'\e[1;92m[\e[0m\e[1;77m |/\| \e[0m\e[1;92m] Gathering Resources...  \e[0m'
-  sleep 2
-  echo $'\e[1;92m[\e[0m\e[1;77m |\/| \e[0m\e[1;92m] Connecting to Github  \e[0m'
-  git clone https://github.com/ZeroPrime9/Nmap_ToolK1t.git
-  update_file=$(pwd)
-  cd  Nmap_ToolK1t
-  mv Nmap_ToolK1t.sh $update_file
-  mv CHANGELOG.md $update_file
-  mv LICENSE.md $update_file
-  mv README.md $update_file
-  cd ..
-  rm -rf Nmap_ToolK1t
-  printf "\e[1;92m[\e[0m\e[1;77m |/\| \e[0m\e[1;92m] Latest version: $version_check \e[0m"
-  sleep 3
-  echo $'\e[1;92m[\e[0m\e[1;77m |\/| \e[0m\e[1;92m] Nmap ToolKit is updated to the latest version  \e[0m'
-  echo $'\e[1;92m[\e[0m\e[1;77m |\/| \e[0m\e[1;91m] Loading Nmap ToolKit..  \e[0m'
-  sleep 4
-  clear
   banner
-  user_input
+  update_file=$(pwd)
+  version_check=$(cat Version.md)
+  echo $'\e[1;92m[\e[0m\e[1;77m |\/| \e[0m\e[1;92m] Gathering Resources...  \e[0m'
+  sleep 2
+  echo $'\e[1;92m[\e[0m\e[1;77m |/\| \e[0m\e[1;92m] Connecting to Github  \e[0m'
+  git clone https://github.com/ZeroPrime9/Nmap_ToolK1t.git
+  version_recheck=$(cat Nmap_ToolK1t/Version.md)
+  if [ "$version_check" == "$version_recheck" ]
+  then
+    echo " "
+    echo $'\e[1;92m[\e[0m\e[1;77m |\/| \e[0m\e[1;91m] ===========================================  \e[0m'
+    echo $'\e[1;92m[\e[0m\e[1;77m |/\| \e[0m\e[1;92m] Nmap_ToolK1t is up to date!.  \e[0m'
+    echo $'\e[1;92m[\e[0m\e[1;77m |\/| \e[0m\e[1;92m] Loading Nmap_ToolK1t home screen  \e[0m'
+    echo $'\e[1;92m[\e[0m\e[1;77m |/\| \e[0m\e[1;91m] ===========================================  \e[0m'
+    rm -rf Nmap_ToolK1t
+    sleep 10
+    banner
+    user_input
+  else
+    echo $'\e[1;92m[\e[0m\e[1;77m |\/| \e[0m\e[1;92m] Nmap_ToolK1t needs update, Proceeding to update  \e[0m'
+    sleep 2
+    echo $'\e[1;92m[\e[0m\e[1;77m |/\| \e[0m\e[1;92m] Updating Nmap ToolKit  \e[0m'
+    cd  Nmap_ToolK1t
+    mv Nmap_ToolK1t.sh $update_file
+    mv CHANGELOG.md $update_file
+    mv LICENSE.md $update_file
+    mv README.md $update_file
+    mv Version.md $update_file
+    mv Screenshots $update_file
+    cd ..
+    rm -rf Nmap_ToolK1t
+    printf "\e[1;92m[\e[0m\e[1;77m |\/| \e[0m\e[1;92m] Latest version: $version_recheck \e[0m"
+    sleep 2
+    echo " "
+    sleep 2
+    echo $'\e[1;92m[\e[0m\e[1;77m |/\| \e[0m\e[1;92m] Nmap ToolKit is updated to the latest version  \e[0m'
+    echo $'\e[1;92m[\e[0m\e[1;77m |\/| \e[0m\e[1;92m] Relaunch Nmap_ToolK1t and enjoy  \e[0m'
+    exit
+  fi
 
 }
 
