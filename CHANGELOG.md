@@ -1,5 +1,9 @@
 # CHANGELOG
 
+##V1.1.2
+- V1.1.2 Patched Alignment issue in other Operating system.
+- V1.1.2 Patched issue when running as a non-root user.
+
 ## V1.1.1
 - V1.1.1 Patched changes in the Update branch
 
