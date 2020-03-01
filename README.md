@@ -1,6 +1,8 @@
 # Nmap_ToolK1t
 Nmap made simpler with multiple scan techniques and more
 
+### Give credits when copying the code, it would be appreciated.
+
 ## ABOUT:
 Nmap_ToolK1t is an automated scanner that can be used during a penetration test to enumerate and scan for vulnerabilities. This tool is made for making Nmap scans simpler and automated depending on user preference.
 
