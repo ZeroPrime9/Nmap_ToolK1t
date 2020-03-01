@@ -16,7 +16,7 @@ banner() # Introduction Banner
   printf "\e[1;77m                            (_____)                                                        \e[0m\n"
   printf "\n"
   printf "\e[1;93m      ..:..        Recon tool created by: Farzan Mohammed [Zero_Prime9]            ..:..\e[0m\n"
-  printf "\e[1;91m      ..:..                            Version:\e[1;91 1.0.1                                 ..:..\e[0m\n"
+  printf "\e[1;91m      ..:..                            Version:\e[1;91 1.0.1                               ..:..\e[0m\n"
   printf "\e[1;93m      ..:..       Follow me on Instagram: \e[1;92 @Zero_Prime9                             ..:..\e[0m\n"
   printf "\e[1;93m      ..:..       Github: \e[1;92 https://www.github.com/ZeroPrime9/Nmap_ToolK1t           ..:..\e[0m\n"
   printf "\e[1;93m      ..:..              Welcome to Nmap ToolKit                                   ..:..\e[0m\n"
