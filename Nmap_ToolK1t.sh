@@ -1,10 +1,10 @@
 # !/bin/bash
 # Author: Farzan Mohammed
 
-
 banner() # Introduction Banner
 {
   clear
+  version_check="1.1.0"
   printf "\e[1;77m _        _______  _______  _______ _________ _______  _______  _        _        __ _________ \e[0m\n"
   printf "\e[1;77m( (    /|(       )(  ___  )(  ____ )\__   __/(  ___  )(  ___  )( \      | \    /\/  \\__   __/ \e[0m\n"
   printf "\e[1;77m|  \  ( || () () || (   ) || (    )|   ) (   | (   ) || (   ) || (      |  \  / /\/) )  ) ( \e[0m\n"
@@ -16,10 +16,10 @@ banner() # Introduction Banner
   printf "\e[1;77m                            (_____)                                                        \e[0m\n"
   printf "\n"
   printf "\e[1;93m      ..:..        Recon tool created by: Farzan Mohammed [Zero_Prime9]            ..:..\e[0m\n"
-  printf "\e[1;91m      ..:..                            Version:\e[1;91 1.0.1                               ..:..\e[0m\n"
-  printf "\e[1;93m      ..:..       Follow me on Instagram: \e[1;92 @Zero_Prime9                             ..:..\e[0m\n"
-  printf "\e[1;93m      ..:..       Github: \e[1;92 https://www.github.com/ZeroPrime9/Nmap_ToolK1t           ..:..\e[0m\n"
-  printf "\e[1;93m      ..:..              Welcome to Nmap ToolKit                                   ..:..\e[0m\n"
+  printf "\e[1;91m      ..:..                            Version:\e[1;91 $version_check                               ..:..\e[0m\n"
+  printf "\e[1;93m      ..:..        Follow me on Instagram: \e[1;92 @Zero_Prime9                            ..:..\e[0m\n"
+  printf "\e[1;93m      ..:..        Github: \e[1;92 https://www.github.com/ZeroPrime9/Nmap_ToolK1t          ..:..\e[0m\n"
+  printf "\e[1;93m      ..:..                        Welcome to Nmap ToolKit                         ..:..\e[0m\n"
   printf "\n"
   printf "  \e[1;31m                  :: Disclaimer: Developers assume no liability    ::\e[0m\n"
   printf "  \e[1;31m                  :: Search your victim, before you annihilate ;)  ::\e[0m\n"
@@ -29,10 +29,10 @@ banner() # Introduction Banner
   file_loc="Scanned_Target"
   if [ -e $file_loc ]
   then
-     echo $'  \e[1;32m                  :: Check Nmap_ToolK1t/Scanned_Target for logs    ::\e[0m'
+     echo $'  \e[1;32m                  ::        Check Scanned_Target for logs          ::\e[0m'
   else
       mkdir Scanned_Target
-      echo $'  \e[1;32m                  :: File Nmap_ToolK1t/Scanned_Target created      ::   \e[0m'
+      echo $'  \e[1;32m                  ::        File Scanned_Target created            ::\e[0m'
   fi
 }
 
@@ -41,10 +41,12 @@ user_input() # For selecting different type of scans
   Choice=" "
   echo " "
   echo $'\n\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] 1.Basic Scan \e[0m'
-  echo $'\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] 2.Advanced Scan \e[1;91m                         [Will Release in #V1.1 Update] \e[0m'
-  echo $'\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] 3.Firewalls IDS Evasion and Spoofing \e[1;91m    [Will Release in #V1.2 Update] \e[0m'
-  echo $'\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] 4.Nmap Nikto Scan \e[1;91m                       [Will Release in #V1.3 Update] \e[0m'
-  echo $'\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] 5.Nmap NetBios Scan \e[1;91m                     [Will Release in #V1.4 Update] \e[0m'
+  echo $'\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] 2.Advanced Scan \e[1;91m                         [Will Release in #V1.2 Update] \e[0m'
+  echo $'\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] 3.Firewalls IDS Evasion and Spoofing \e[1;91m    [Will Release in #V1.3 Update] \e[0m'
+  echo $'\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] 4.Nmap Nikto Scan \e[1;91m                       [Will Release in #V1.4 Update] \e[0m'
+  echo $'\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] 5.Nmap NetBios Scan \e[1;91m                     [Will Release in #V1.5 Update] \e[0m'
+  echo $'\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] 6.Update Nmap ToolKit \e[1;91m                    \e[0m'
+  echo $'\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] 7.Quit Nmap ToolKit \e[1;91m                      \e[0m'
 
   read -p $'\n\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Choose an option: \e[0m' Choice
 
@@ -65,6 +67,14 @@ user_input() # For selecting different type of scans
   elif [ "$Choice" == "5" ]
    then
     echo $'\e[1;91m Nmap NetBios Scan will come up in the next update Follow me in Instagram @Zero_Prime9 for more details\e[0m'
+  elif [ "$Choice" == "6" ]
+   then
+    update
+  elif [ "$Choice" == "7" ]
+   then
+    echo $'\e[1;91m Have fun Hacking, Cheers Zero_Prime9 :)\e[0m'
+    echo " "
+    exit
   else
 
   	echo -e "\e[91m You have selected an Invalid Choice"
@@ -73,6 +83,29 @@ user_input() # For selecting different type of scans
   echo " "
   echo $'\e[1;92m Sometimes its wise to scan before you exploit \e[0m'
   echo $'\e[1;92m More the information, Easier the attack \e[0m'
+}
+
+update()
+{
+  echo $'\e[1;92m[\e[0m\e[1;77m |\/| \e[0m\e[1;92m] Updating Nmap ToolKit  \e[0m'
+  echo $'\e[1;92m[\e[0m\e[1;77m |/\| \e[0m\e[1;92m] Gathering Resources...  \e[0m'
+  sleep 2
+  echo $'\e[1;92m[\e[0m\e[1;77m |\/| \e[0m\e[1;92m] Connecting to Github  \e[0m'
+  git clone https://github.com/ZeroPrime9/Nmap_ToolK1t.git
+  update_file=$(pwd)
+  cd  Nmap_ToolK1t
+  mv Nmap_ToolK1t.sh $update_file
+  mv CHANGELOG.md $update_file
+  mv LICENSE.md $update_file
+  mv README.md $update_file
+  cd ..
+  rm -rf Nmap_ToolK1t
+  printf "\e[1;92m[\e[0m\e[1;77m |/\| \e[0m\e[1;92m] Latest version: $version_check \e[0m"
+  sleep 2
+  echo " "
+  sleep 2
+  echo $'\e[1;92m[\e[0m\e[1;77m |\/| \e[0m\e[1;92m] Nmap ToolKit is updated to the latest version  \e[0m'
+
 }
 
 basic_scan_banner() # Banner for the Basic Scan
@@ -134,7 +167,7 @@ Basic_Scan_Choice_IP() #The type of scans for BASIC_SCAN_CHOICE
   echo $'\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] 7.TCP Scan \e[0m'
   echo $'\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] 8.UDP Scan \e[0m'
   echo $'\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] 9.Ping Scan with port scan disabled \e[0m'
-  read -p $'\n\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Choose scan type [1-8]: \e[0m' bs_scan_sc
+  read -p $'\n\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Choose scan type [1-9]: \e[0m' bs_scan_sc
   echo " "
   file_loc_ping="Scanned_Target/Ping_Scan.log"
   file_loc_sV="Scanned_Target/Service_Detection_Scan.log"
@@ -543,6 +576,11 @@ Basic_Scan_Choice_IP() #The type of scans for BASIC_SCAN_CHOICE
                         fi
 
               ;; #End of Setup for Ping_Scan_Port_Disabled_Scan
+
+              *) echo -e "\e[91m Invalid Choice "
+
+              ;;
+
   esac
 
 
@@ -566,7 +604,7 @@ Basic_Scan_Choice_File() #The type of scans for BASIC_SCAN_CHOICE
   echo $'\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] 7.TCP Scan \e[0m'
   echo $'\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] 8.UDP Scan \e[0m'
   echo $'\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] 9.Ping Scan with port scan disabled \e[0m'
-  read -p $'\n\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Choose scan type [1-8]: \e[0m' bs_scan_sc
+  read -p $'\n\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Choose scan type [1-9]: \e[0m' bs_scan_sc
   echo " "
   file_loc_ping="Scanned_Target/Ping_Scan.log"
   file_loc_sV="Scanned_Target/Service_Detection_Scan.log"
@@ -975,6 +1013,10 @@ Basic_Scan_Choice_File() #The type of scans for BASIC_SCAN_CHOICE
                         fi
 
               ;; #End of Setup for Ping_Scan_Port_Disabled_Scan
+
+              *) echo -e "\e[91m Invalid Choice "
+
+              ;;
   esac
 }
 
