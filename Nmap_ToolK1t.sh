@@ -4,7 +4,7 @@
 banner() # Introduction Banner
 {
   clear
-  version_check="1.1.2"
+  version_check=$(cat Version.md)
   printf "\e[1;77m _        _______  _______  _______ _________ _______  _______  _        _        __ _________ \e[0m\n"
   printf "\e[1;77m( (    /|(       )(  ___  )(  ____ )\__   __/(  ___  )(  ___  )( \      | \    /\/  \\__   __/ \e[0m\n"
   printf "\e[1;77m|  \  ( || () () || (   ) || (    )|   ) (   | (   ) || (   ) || (      |  \  / /\/) )  ) ( \e[0m\n"
@@ -16,9 +16,9 @@ banner() # Introduction Banner
   printf "\e[1;77m                            (_____)                                                        \e[0m\n"
   printf "\n"
   printf "\e[1;93m      ..:..        Recon tool created by: Farzan Mohammed [Zero_Prime9]            ..:..\e[0m\n"
-  printf "\e[1;91m      ..:..                        Version: $version_check                                  ..:..\e[0m\n"
-  printf "\e[1;93m      ..:..        Follow me on Instagram: @Zero_Prime9                            ..:..\e[0m\n"
-  printf "\e[1;93m      ..:..        Github: https://www.github.com/ZeroPrime9/Nmap_ToolK1t          ..:..\e[0m\n"
+  printf "\e[1;91m      ..:..                            Version:\e[1;91 $version_check                               ..:..\e[0m\n"
+  printf "\e[1;93m      ..:..        Follow me on Instagram: \e[1;92 @Zero_Prime9                            ..:..\e[0m\n"
+  printf "\e[1;93m      ..:..        Github: \e[1;92 https://www.github.com/ZeroPrime9/Nmap_ToolK1t          ..:..\e[0m\n"
   printf "\e[1;93m      ..:..                        Welcome to Nmap ToolKit                         ..:..\e[0m\n"
   printf "\n"
   printf "  \e[1;31m                  :: Disclaimer: Developers assume no liability    ::\e[0m\n"
@@ -101,10 +101,13 @@ update_toolkit()
   cd ..
   rm -rf Nmap_ToolK1t
   printf "\e[1;92m[\e[0m\e[1;77m |/\| \e[0m\e[1;92m] Latest version: $version_check \e[0m"
-  sleep 2
-  echo " "
-  sleep 2
+  sleep 3
   echo $'\e[1;92m[\e[0m\e[1;77m |\/| \e[0m\e[1;92m] Nmap ToolKit is updated to the latest version  \e[0m'
+  echo $'\e[1;92m[\e[0m\e[1;77m |\/| \e[0m\e[1;91m] Loading Nmap ToolKit..  \e[0m'
+  sleep 4
+  clear
+  banner
+  user_input
 
 }
 
