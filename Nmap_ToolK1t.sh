@@ -157,7 +157,8 @@ Basic_Scan_Input()
 {
   basic_scan_banner
   Choice_BS=" " # Choice for IP or File location
-  echo $'\n\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] 1.Scan a particular IP Address/Website \e[0m'
+  echo $'\n\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] 0.Go Back \e[0m'
+  echo $'\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] 1.Scan a particular IP Address/Website \e[0m'
   echo $'\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] 2.Scan from a File\e[0m'
   read -p $'\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Choose an option: \e[0m' Choice_BS
   echo " "
@@ -165,9 +166,12 @@ Basic_Scan_Input()
   if [[ $Choice_BS == 1 ]]; then
       echo -e "\e[93m You have selected:\e[91m Scan a particular IP Address/Website"
       ip_input_bs
-  elif [[ $Choice_BS ]]; then
+  elif [[ $Choice_BS == 2 ]]; then
       echo -e "\e[93m You have selected:\e[91m Scan From a File"
       file_input_bs
+  elif [[ $Choice_BS == 0 ]]; then
+	  banner
+	  user_input
   else
       echo -e "\e[91m Invalid option \e[0m"
   fi
