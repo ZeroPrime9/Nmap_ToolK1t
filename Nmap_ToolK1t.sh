@@ -1,5 +1,5 @@
 # !/bin/bash
-# Author: Farzan Mohammed
+# Author: Farzan Nobi
 
 banner() # Introduction Banner
 {
@@ -45,7 +45,7 @@ user_input() # For selecting different type of scans
   echo $'\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] 3.Firewalls IDS Evasion and Spoofing \e[1;91m    [Will Release in #V1.3 Update] \e[0m'
   echo $'\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] 4.Nmap Nikto Scan \e[1;91m                       [Will Release in #V1.4 Update] \e[0m'
   echo $'\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] 5.Nmap NetBios Scan \e[1;91m                     [Will Release in #V1.5 Update] \e[0m'
-  echo $'\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] 6.Update Nmap ToolKit \e[1;91m                    \e[0m'
+  echo $'\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] 6.Update Nmap ToolKit \e[1;91m                   [Update every 3 days ;)]                   \e[0m'
   echo $'\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] 7.Quit Nmap ToolKit \e[1;91m                      \e[0m'
 
   read -p $'\n\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Choose an option: \e[0m' Choice
@@ -55,7 +55,7 @@ user_input() # For selecting different type of scans
   if [ "$Choice" == "1" ]
   then
   	Basic_Scan_Input
-  elif [ $"$Choice" == "2" ]
+  elif [ "$Choice" == "2" ]
   then
     echo $'\e[1;91m Advanced Scan will come up in the next update Follow me in Instagram @Zero_Prime9 for more details \e[0m'
   elif [ "$Choice" == "3" ]
@@ -77,12 +77,14 @@ user_input() # For selecting different type of scans
     exit
   else
 
-  	echo -e "\e[91m You have selected an Invalid Choice"
+  	printf "\e[91m    You have selected an Invalid Choice"
+    sleep 2
   fi
 
   echo " "
-  echo $'\e[1;92m Sometimes its wise to scan before you exploit \e[0m'
-  echo $'\e[1;92m More the information, Easier the attack \e[0m'
+  echo $'\e[1;92m                        :: Sometimes its wise to scan before you exploit :: \e[0m'
+  echo $'\e[1;92m                        :: More the information, Easier the attack       ::\e[0m'
+  echo " "
 }
 
 update_toolkit()
@@ -157,19 +159,32 @@ Basic_Scan_Input()
 {
   basic_scan_banner
   Choice_BS=" " # Choice for IP or File location
-  echo $'\n\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] 1.Scan a particular IP Address/Website \e[0m'
+  echo ""
+  echo $'\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] 1.Scan a particular IP Address/Website \e[0m'
   echo $'\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] 2.Scan from a File\e[0m'
+  echo $'\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m]\e[1;91m 0.Back\e[0m'
+  echo ""
   read -p $'\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Choose an option: \e[0m' Choice_BS
   echo " "
 
-  if [[ $Choice_BS == 1 ]]; then
+  if [ "$Choice_BS" == "1" ]
+  then
       echo -e "\e[93m You have selected:\e[91m Scan a particular IP Address/Website"
       ip_input_bs
-  elif [[ $Choice_BS ]]; then
+  elif [ "$Choice_BS" == "2" ]
+  then
       echo -e "\e[93m You have selected:\e[91m Scan From a File"
       file_input_bs
+  elif [ "$Choice_BS" == "0" ]
+  then
+      banner
+      user_input
+
   else
-      echo -e "\e[91m Invalid option \e[0m"
+
+      echo -e "\e[91m    Invalid option \e[0m"
+      sleep 3
+      Basic_Scan_Input
   fi
 
 }
@@ -191,6 +206,7 @@ Basic_Scan_Choice_IP() #The type of scans for BASIC_SCAN_CHOICE
   echo $'\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] 7.TCP Scan \e[0m'
   echo $'\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] 8.UDP Scan \e[0m'
   echo $'\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] 9.Ping Scan with port scan disabled \e[0m'
+  echo $'\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m]\e[1;91m 0.Back \e[0m'
   read -p $'\n\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Choose scan type [1-9]: \e[0m' bs_scan_sc
   echo " "
   file_loc_ping="Scanned_Target/Ping_Scan.log"
@@ -601,7 +617,16 @@ Basic_Scan_Choice_IP() #The type of scans for BASIC_SCAN_CHOICE
 
               ;; #End of Setup for Ping_Scan_Port_Disabled_Scan
 
-              *) echo -e "\e[91m Invalid Choice "
+              "0" ) # For moving back
+                    banner
+                    user_input
+
+              ;;
+
+              *)
+                 echo -e "\e[91m    Invalid Choice "
+                 sleep 3
+                 Basic_Scan_Choice_IP
 
               ;;
 
@@ -628,6 +653,7 @@ Basic_Scan_Choice_File() #The type of scans for BASIC_SCAN_CHOICE
   echo $'\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] 7.TCP Scan \e[0m'
   echo $'\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] 8.UDP Scan \e[0m'
   echo $'\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] 9.Ping Scan with port scan disabled \e[0m'
+  echo $'\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m]\e[1;91m 0.Back \e[0m'
   read -p $'\n\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Choose scan type [1-9]: \e[0m' bs_scan_sc
   echo " "
   file_loc_ping="Scanned_Target/Ping_Scan.log"
@@ -1038,8 +1064,16 @@ Basic_Scan_Choice_File() #The type of scans for BASIC_SCAN_CHOICE
 
               ;; #End of Setup for Ping_Scan_Port_Disabled_Scan
 
-              *) echo -e "\e[91m Invalid Choice "
+              "0" ) # For moving back
+                    banner
+                    user_input
 
+              ;;
+
+              *)
+                echo -e "\e[91m    Invalid Choice "
+                sleep 3
+                Basic_Scan_Choice_File
               ;;
   esac
 }
@@ -1052,9 +1086,9 @@ ip_input_bs() #IP Address Input for Basic Scan
   while [[ $ip_choice == "n" ]];
 	do
 		echo " "
-		read -p $'\e[1;31m Enter IP Address/Website:  \e[0m' IP
-		echo $'\e[1;33m The entered IP Address is: \e[0m' $IP
-		read -p $'\e[1;33m Do you want to continue with the IP [y/n]\e[0m' ip_choice
+		read -p $'\e[1;31m    Enter IP Address/Website:   \e[0m' IP
+		echo $'\e[1;33m    The entered IP Address is: \e[0m' $IP
+		read -p $'\e[1;33m    Do you want to continue with the IP [y/n]\e[0m' ip_choice
 done
 Basic_Scan_Choice_IP
 }
@@ -1067,9 +1101,9 @@ file_input_bs() #File Location Input for Basic Scan
   while [[ $file_choice == "n" ]];
 	do
 		echo " "
-		read -p $'\e[1;31m Enter File Location:  \e[0m' IP
-		echo $'\e[1;33m The entered IP Address is: \e[0m' $IP
-		read -p $'\e[1;33m Do you want to continue with the selected file[y/n]: \e[0m' file_choice
+		read -p $'\e[1;31m    Enter File Location:  \e[0m' IP
+		echo $'\e[1;33m    The entered File Location:\e[0m' $IP
+		read -p $'\e[1;33m    Do you want to continue with the selected file[y/n]: \e[0m' file_choice
 done
 Basic_Scan_Choice_File
 }
