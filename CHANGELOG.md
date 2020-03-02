@@ -1,5 +1,13 @@
 # CHANGELOG
 
+#V1.1.5
+- V1.1.5 Added back function to the scans.
+- V1.1.5 Added "Scan from a file" functionality.
+- V1.1.5 Upgraded Alignment for ending.
+- V1.1.5 Fixed Minor Bugs.
+- V1.1.5 Overall stability improved
+- V1.1.5 Added return to menu option after choosing an Invalid Choice
+
 ##V1.1.4
 - V1.1.4 Added new update branch function.
 - V1.1.4 Fixed bugs in Update Branch.
