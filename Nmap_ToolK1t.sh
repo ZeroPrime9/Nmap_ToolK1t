@@ -76,14 +76,12 @@ user_input() # For selecting different type of scans
     echo " "
     exit
   else
-
   	echo -e "\e[91m You have selected an Invalid Choice"
+	echo " "
+	echo $'\e[1;92m Sometimes its wise to scan before you exploit \e[0m'
+	echo $'\e[1;92m More the information, Easier the attack \e[0m'
   fi
-
-  echo " "
-  echo $'\e[1;92m Sometimes its wise to scan before you exploit \e[0m'
-  echo $'\e[1;92m More the information, Easier the attack \e[0m'
-}
+  }
 
 update_toolkit()
 {
