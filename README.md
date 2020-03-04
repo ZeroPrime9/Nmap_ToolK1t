@@ -2,7 +2,7 @@
 
 # Nmap_ToolK1t
 
-Nmap made simpler with multiple scan techniques and more
+Nmap made simpler with multiple scan techniques and more. Current Version Version 2.0
 
 ### It would be appreciated if you gave credit when redistributing versions of this code, modified or unmodified, source code or executable :)
 
