@@ -1,5 +1,26 @@
 # CHANGELOG
 
+## V2.0
+- V2.0 Overall Change in UI Improvement.
+- V2.0 Upgraded ASCII Signature.
+- V2.0 Added Nmap Nikto Scan Branch.
+- V2.0 Added Nikto Nmap HTTP Server scan under Nmap Nikto Branch.
+- V2.0 Added Nikto Nmap HTTPS Server scan under Nmap Nikto Branch.
+- V2.0 Added Nmap NetBios Scan Branch.
+- V2.0 Added Nmap NetBios Server Scan under Nmap NetBios Branch.
+- V2.0 Added Nmap NetBios Enumeration Scan under Nmap NetBios Branch.
+- V2.0 Added Log clearing feature.
+- V2.0 Added "Log clearer for Basic Scan".
+- V2.0 Added "Log clearer for Advanced Scan".
+- V2.0 Added "Log clearer for Firewalls IDS Evasion and Spoofing Scan".
+- V2.0 Added "Log clearer for Nmap NetBios Scan".
+- V2.0 Added "Log clearer for Nmap Nikto Scan".
+- V2.0 Fixed Major Bugs when scanning in UDP .
+- V2.0 Fixed Minor Bugs.
+- V2.0 Fixed Alignment issues.
+
+
+
 ## V1.1.5
 - V1.1.5 Added back function to the scans.
 - V1.1.5 Added "Scan from a file" functionality.
