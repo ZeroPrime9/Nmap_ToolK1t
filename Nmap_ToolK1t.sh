@@ -2202,7 +2202,7 @@ update_toolkit() #Updation of Tool
     mv Screenshots $update_file
     cd ..
     rm -rf Nmap_ToolK1t
-    printf "\e[1;92m[\e[0m\e[1;77m |\/| \e[0m\e[1;92m] Latest version: $version_check \e[0m"
+    printf "\e[1;92m[\e[0m\e[1;77m |\/| \e[0m\e[1;92m] Latest version: $version_recheck \e[0m"
     sleep 2
     echo " "
     sleep 2
