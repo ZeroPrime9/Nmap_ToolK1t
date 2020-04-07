@@ -1,5 +1,21 @@
 # CHANGELOG
 
+## V2.1
+- V2.1 Minor Bugs Fixed.
+- V2.1 Spelling Error Fixed.
+- V2.1 Added Firewall, IDS, Evasion and Spoofing branch added.
+- V2.1 Added Firewall Evasion using Fragment Packets sub branches added.
+- V2.1 Added Firewall Evasion using MTU Packets sub branches added.
+- V2.1 Added Nmap Decoy Scan Packets sub branches added.
+- V2.1 Added Nmap Idle Zombie Scan Packets sub branches added.
+- V2.1 Added Nmap Manual Source Port Scan Packets sub branches added.
+- V2.1 Added Nmap Manual Random Data Scan Packets sub branches added.
+- V2.1 Added Nmap Randomize Target Scan Order Packets sub branches added.
+- V2.1 Added Nmap Bad Checksum Scan Packets sub branches added.
+- V2.1 Fixed the bug where Nmap_Nikto Scan doesn't work.
+- V2.1 Fixed the bug where Nmap_Netbios Scan doesn't work.
+- V2.1 Fixed bugs with the Logs.
+
 ## V2.0
 - V2.0 Overall Change in UI Improvement.
 - V2.0 Upgraded ASCII Signature.
@@ -18,8 +34,6 @@
 - V2.0 Fixed Major Bugs when scanning in UDP .
 - V2.0 Fixed Minor Bugs.
 - V2.0 Fixed Alignment issues.
-
-
 
 ## V1.1.5
 - V1.1.5 Added back function to the scans.
