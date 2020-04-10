@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## V2.2
+- V2.2 Minor bug fixed in the branch Firewall, IDS, Evasion and Spoofing.
+
 ## V2.1
 - V2.1 Minor Bugs Fixed.
 - V2.1 Spelling Error Fixed.

@@ -316,18 +316,18 @@ Basic_Scan_Banner() # Banner for the Basic Scan
 {
   clear
   echo " "
-  printf "\e[1;77m ______   _______  _______ _________ _______       _______  _______  _______  _       \e[0m\n"
-  printf "\e[1;77m(  ___ \ (  ___  )(  ____ \\__   __/(  ____ \     (  ____ \(  ____ \(  ___  )( (    /|\e[0m\n"
-  printf "\e[1;77m| (   ) )| (   ) || (    \/   ) (   | (    \/     | (    \/| (    \/| (   ) ||  \  ( |\e[0m\n"
-  printf "\e[1;77m| (__/ / | (___) || (_____    | |   | |           | (_____ | |      | (___) ||   \ | |\e[0m\n"
-  printf "\e[1;77m|  __ (  |  ___  |(_____  )   | |   | |           (_____  )| |      |  ___  || (\ \) | \e[0m\n"
-  printf "\e[1;77m| (  \ \ | (   ) |      ) |   | |   | |                 ) || |      | (   ) || | \   |\e[0m\n"
-  printf "\e[1;77m| )___) )| )   ( |/\____) |___) (___| (____/\     /\____) || (____/\| )   ( || )  \  |\e[0m\n"
-  printf "\e[1;77m|/ \___/ |/     \|\_______)\_______/(_______/_____\_______)(_______/|/     \||/    )_)\e[0m\n"
+  printf "\e[1;77m        ______   _______  _______ _________ _______       _______  _______  _______  _         \e[0m\n"
+  printf "\e[1;77m       (  ___ \ (  ___  )(  ____ \\__   __/(  ____ \      (  ____ \(  ____ \(  ___  )( (    /|  \e[0m\n"
+  printf "\e[1;77m       | (   ) )| (   ) || (    \/   ) (   | (    \/     | (    \/| (    \/| (   ) ||  \  ( |  \e[0m\n"
+  printf "\e[1;77m       | (__/ / | (___) || (_____    | |   | |           | (_____ | |      | (___) ||   \ | |  \e[0m\n"
+  printf "\e[1;77m       |  __ (  |  ___  |(_____  )   | |   | |           (_____  )| |      |  ___  || (\ \) |  \e[0m\n"
+  printf "\e[1;77m       | (  \ \ | (   ) |      ) |   | |   | |                 ) || |      | (   ) || | \   |  \e[0m\n"
+  printf "\e[1;77m       | )___) )| )   ( |/\____) |___) (___| (____/\     /\____) || (____/\| )   ( || )  \  |  \e[0m\n"
+  printf "\e[1;77m       |/ \___/ |/     \|\_______)\_______/(_______/_____\_______)(_______/|/     \||/    )_)  \e[0m\n"
   printf "\n"
-  printf "\e[1;35m       .:.:.\e[0m\e[1;77m   Recon Tool coded by:  @Zero_Prime9  $version_check  \e[0m\e[1;35m.:.:.\e[0m\n"
-  printf "\e[1;35m       .:.:.\e[0m\e[1;77m                 Nmap_ToolK1t \e[0m\e[1;35m               .:.:.\e[0m\n"
-  printf "\e[1;93m    :: Sometimes being Basic is all you need, never underestimate it ::\e[0m\n"
+  printf "\e[1;35m                      .:.:.\e[0m\e[1;77m   Recon Tool coded by:  @Zero_Prime9  $version_check  \e[0m\e[1;35m.:.:.\e[0m\n"
+  printf "\e[1;35m                      .:.:.\e[0m\e[1;77m                 Nmap_ToolK1t \e[0m\e[1;35m               .:.:.\e[0m\n"
+  printf "\e[1;93m                :: Sometimes being Basic is all you need, never underestimate it ::\e[0m\n"
 
   printf "\n"
 }
@@ -410,6 +410,7 @@ Basic_Scan_Choice_IP() #The type of scans for BASIC_SCAN_CHOICE
 {
   clear
   Basic_Scan_Banner
+  echo " "
   bs_scan_sc=" "
   echo $'\e[96m\e[1;1m =============================================================='
   echo $'\e[31m        Target IP Address: \e[1;1m' $IP_FILE_Input
@@ -1381,9 +1382,9 @@ Nmap_Netbios_Banner() #NetBios_Nmap Banner
   printf "\e[1;77m|/    )_)|/     \||/     \||/_____  |/    )_)(_______/   )_(   |/ \___/ \_______/(_______)\_______)_____\_______)(_______/|/     \||/    )_)\e[0m\n"
   printf "\e[1;77m                           (_____)                                                               (_____)                                    \e[0m\n"
   printf "\n"
-  printf "\e[1;35m       .:.:.\e[0m\e[1;77m   Recon Tool coded by:  @Zero_Prime9  $version_check        \e[0m\e[1;35m.:.:.\e[0m\n"
-  printf "\e[1;35m       .:.:.\e[0m\e[1;77m                 Nmap_ToolK1t \e[0m\e[1;35m                     .:.:.\e[0m\n"
-  printf "\e[1;36m    [::]  Sizzle with Session Hijacking, Maybe that's all you need  [::]\e[0m\n"
+  printf "\e[1;35m                                         .:.:.\e[0m\e[1;77m     Recon Tool coded by:  @Zero_Prime9  $version_check      \e[0m\e[1;35m.:.:.\e[0m\n"
+  printf "\e[1;35m                                         .:.:.\e[0m\e[1;77m                 Nmap_ToolK1t \e[0m\e[1;35m                     .:.:.\e[0m\n"
+  printf "\e[1;35m                                         .:.:.\e[0m\e[1;77m               Nmap_Netbios_Scan \e[0m\e[1;35m                  .:.:.\e[0m\n"
   printf "\n"
 
 }
@@ -1392,6 +1393,7 @@ Nmap_Netbios_Scan() #NEtbios Nmap Scan
 {
   clear
   Nmap_Netbios_Banner
+  echo " "
   Nmap_Netbios_choice=" "
   echo $'\e[96m\e[1;1m =============================================================='
   echo $'\e[31m        Target IP Address: \e[1;1m' $IP_NN_Input
@@ -1532,8 +1534,8 @@ Nmap_Nikto_Banner() #Banner for Nikto
 {
   clear
   echo " "
-  printf "\e[1;77m _        _______  _______  _______  _       _________ _       _________ _______       _______  _______  _______  _       \e[0m\n"
-  printf "\e[1;77m( (    /|(       )(  ___  )(  ____ )( (    /|\__   __/| \    /\\__   __/(  ___  )     (  ____ \(  ____ \(  ___  )( (    /|\e[0m\n"
+  printf "\e[1;77m _        _______  _______  _______  _       _________ _      _________ _______       _______  _______  _______  _       \e[0m\n"
+  printf "\e[1;77m( (    /|(       )(  ___  )(  ____ )( (    /|\__   __/| \    /\\__   __/ (  ___  )     (  ____ \(  ____ \(  ___  )( (    /|\e[0m\n"
   printf "\e[1;77m|  \  ( || () () || (   ) || (    )||  \  ( |   ) (   |  \  / /   ) (   | (   ) |     | (    \/| (    \/| (   ) ||  \  ( |\e[0m\n"
   printf "\e[1;77m|   \ | || || || || (___) || (____)||   \ | |   | |   |  (_/ /    | |   | |   | |     | (_____ | |      | (___) ||   \ | |\e[0m\n"
   printf "\e[1;77m| (\ \) || |(_)| ||  ___  ||  _____)| (\ \) |   | |   |   _ (     | |   | |   | |     (_____  )| |      |  ___  || (\ \) |\e[0m\n"
@@ -1542,9 +1544,10 @@ Nmap_Nikto_Banner() #Banner for Nikto
   printf "\e[1;77m|/    )_)|/     \||/     \||/_____  |/    )_)\_______/|_/    \/   )_(   (_______)_____\_______)(_______/|/     \||/    )_)\e[0m\n"
   printf "\e[1;77m                           (_____)                                             (_____)                                    \e[0m\n"
   printf "\n"
-  printf "\e[1;35m       .:.:.\e[0m\e[1;77m   Recon Tool coded by:  @Zero_Prime9  $version_check        \e[0m\e[1;35m.:.:.\e[0m\n"
-  printf "\e[1;35m       .:.:.\e[0m\e[1;77m                 Nmap_ToolK1t \e[0m\e[1;35m                     .:.:.\e[0m\n"
-  printf "\e[1;36m[::] Web Server Vulnerability is amazing. Ever heard of Web Defacement? [::]\e[0m\n"
+  printf "\e[1;35m                                    .:.:.\e[0m\e[1;77m     Recon Tool coded by:  @Zero_Prime9  $version_check      \e[0m\e[1;35m.:.:.\e[0m\n"
+  printf "\e[1;35m                                    .:.:.\e[0m\e[1;77m                 Nmap_ToolK1t \e[0m\e[1;35m                     .:.:.\e[0m\n"
+  printf "\e[1;35m                                    .:.:.\e[0m\e[1;77m                Nmap_Nikto_Scan \e[0m\e[1;35m                   .:.:.\e[0m\n"
+  printf "\e[1;36m                            [::] Web Server Vulnerability is amazing. Ever heard of Web Defacement? [::]\e[0m\n"
   echo " "
 
 }
@@ -1556,6 +1559,7 @@ Nmap_Nikto_Scan() #Nmap Scan using Nikto
  clear
  Nmap_Nikto_Banner
  Nmap_Nikto_choice=" "
+ echo " "
  echo $'\e[96m\e[1;1m =============================================================='
  echo $'\e[31m        Target IP Address: \e[1;1m' $IP_NN_Input
  echo $'\e[36m\e[1;1m =============================================================='
@@ -1706,7 +1710,7 @@ Firewall_IES_Banner() #Banner for Firewall_IDS_Evasion and Spoofing
   printf "\e[1;35m                            :..:\e[0m\e[1;77m                       Nmap_ToolK1t \e[0m\e[1;35m                        :..:\e[0m\n"
   printf "\e[1;35m                            :..:\e[0m\e[1;77m                Firewall_IDS_Evasion_Spoofing \e[0m\e[1;35m              :..:\e[0m\n"
   printf "\e[1;93m         [:..:] Let me guess can't get through a Firewall or is there an IDS, Well you've choosen the right scan [:..:]\e[0m\n"
-  printf "\e[1;31m         [:..:]      Sometimes Evading is a fun game but do it right, with a little bit help of spoofing ;)       [:..:]\e[0m\n"
+  printf "\e[1;31m         [:..:]      Sometimes Evading is a fun game but do it right, with a little bit help of spoofing ;)      [:..:]\e[0m\n"
   echo " "
 
 }
@@ -1983,7 +1987,7 @@ Firewalls_IES()
                 echo "==============================" >> $file_loc_FIES_S_PORT
                 echo $(date) >> $file_loc_FIES_S_PORT
                 echo "==============================" >> $file_loc_FIES_S_PORT
-                echo " " >> $file_loc_FIES_S_PORTRunning First Nikto Setup
+                echo " " >> $file_loc_FIES_S_PORT 
                 nmap --source-port $Src_port $IP_FIES_Input >> $file_loc_FIES_S_PORT
                 echo "==============================" >> $file_loc_FIES_S_PORT
                 sleep 3
