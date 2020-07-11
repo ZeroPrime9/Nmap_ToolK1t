@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## V2.3
+
+- V2.3 Changes made to the UI
+- V2.3 Major changes made to the Programming Structure
+- V2.3 Minor bugs fixed in clearing logs 
+
 ## V2.2
 - V2.2 Minor bug fixed in the branch Firewall, IDS, Evasion and Spoofing.
 - V2.2 Fixed Permission issues.
