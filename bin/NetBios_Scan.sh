@@ -1,28 +1,28 @@
-# !/bin/bash
-# Author: Farzan Nobi Aka Zero_Prime9
-# Nmap_Toolk1t Subtool Nmap_Netbios_Scan
+#!/bin/bash
+#Author: Farzan Nobi Aka Zero_Prime9
+#Nmap_Toolk1t Subtool Nmap_Netbios_Scan
 
 Nmap_Netbios_Banner() #NetBios_Nmap Banner
 {
   version_check=$(cat Version.md)
-  printf "        \e[1;77m _        _______  _______  _______  _        _______ _________ ______  _________ _______  _______       _______  _______  _______  _       \e[0m\n"
-  printf "        \e[1;77m( (    /|(       )(  ___  )(  ____ )( (    /| (  ____ \\__   __/(  ___ \ \__   __/(  ___  )(  ____ \     (  ____ \(  ____ \(  ___  )( (    /|\e[0m\n"
-  printf "        \e[1;77m|  \  ( || () () || (   ) || (    )||  \  ( || (    \/   ) (   | (   ) )   ) (   | (   ) || (    \/     | (    \/| (    \/| (   ) ||  \  ( |\e[0m\n"
-  printf "        \e[1;77m|   \ | || || || || (___) || (____)||   \ | || (__       | |   | (__/ /    | |   | |   | || (_____      | (_____ | |      | (___) ||   \ | |\e[0m\n"
-  printf "        \e[1;77m| (\ \) || |(_)| ||  ___  ||  _____)| (\ \) ||  __)      | |   |  __ (     | |   | |   | |(_____  )     (_____  )| |      |  ___  || (\ \) |\e[0m\n"
-  printf "        \e[1;77m| | \   || |   | || (   ) || (      | | \   || (         | |   | (  \ \    | |   | |   | |      ) |           ) || |      | (   ) || | \   |\e[0m\n"
-  printf "        \e[1;77m| )  \  || )   ( || )   ( || )      | )  \  || (____/\   | |   | )___) )___) (___| (___) |/\____) |     /\____) || (____/\| )   ( || )  \  |\e[0m\n"
-  printf "        \e[1;77m|/    )_)|/     \||/     \||/_____  |/    )_)(_______/   )_(   |/ \___/ \_______/(_______)\_______)_____\_______)(_______/|/     \||/    )_)\e[0m\n"
-  printf "        \e[1;77m                           (_____)                                                               (_____)                                    \e[0m\n"
+  printf "   \e[1;91m                  _        _______  _______  _______  _        ______ _________   _______  _______  _______  _       \e[0m\n"
+  printf "   \e[1;91m                 ( (    /|(       )(  ___  )(  ____ )( (    /|(  ___ \\__   __/   (  ____ \(  ____ \(  ___  )( (    /|\e[0m\n"
+  printf "   \e[1;92m                 |  \  ( || () () || (   ) || (    )||  \  ( || (   ) )  ) (     | (    \/| (    \/| (   ) ||  \  ( |\e[0m\n"
+  printf "   \e[1;92m                 |   \ | || || || || (___) || (____)||   \ | || (__/ /   | |     | (_____ | |      | (___) ||   \ | |\e[0m\n"
+  printf "   \e[1;92m                 | (\ \) || |(_)| ||  ___  ||  _____)| (\ \) ||  __ (    | |     (_____  )| |      |  ___  || (\ \) |\e[0m\n"
+  printf "   \e[1;92m                 | | \   || |   | || (   ) || (      | | \   || (  \ \   | |           ) || |      | (   ) || | \   |\e[0m\n"
+  printf "   \e[1;92m                 | )  \  || )   ( || )   ( || )      | )  \  || )___) )  | |     /\____) || (____/\| )   ( || )  \  |\e[0m\n"
+  printf "   \e[1;91m                 |/    )_)|/     \||/     \||/_____  |/    )_)|/ \___/   )_(_____\_______)(_______/|/     \||/    )_)\e[0m\n"
+  printf "   \e[1;91m                                             (_____)                       (_____)                                   \e[0m\n"
   printf "\n"
-  printf "                                \e[1;77m[\e[0m\e[1;35m..:..\e[0m\e[1;77m]\e[1;33m          Recon tool created by: Farzan Nobi [Zero_Prime9]\e[0m            \e[1;77m[\e[0m\e[1;35m..:..\e[0m\e[1;77m]\e[1;93m\e[0m\n"
-  printf "                                \e[1;77m[\e[0m\e[1;35m..:..\e[0m\e[1;77m]\e[1;33m           Follow me on Instagram and Twitter: @Zero_Prime9\e[0m           \e[1;77m[\e[0m\e[1;35m..:..\e[0m\e[1;77m]\e[1;93m\e[0m\n"
-  printf "                                \e[1;77m[\e[0m\e[1;35m..:..\e[0m\e[1;77m]\e[1;36m        Github: https://www.github.com/ZeroPrime9/Nmap_ToolK1t        \e[0m\e[1;77m[\e[0m\e[1;35m..:..\e[0m\e[1;77m]\e[1;93m\e[0m\n"
-  printf "                                \e[1;77m[\e[0m\e[1;35m..:..\e[0m\e[1;77m]\e[1;36m                  Visit: https://www.zeroprime9.com                   \e[0m\e[1;77m[\e[0m\e[1;35m..:..\e[0m\e[1;77m]\e[1;93m\e[0m\n"
-  printf "                                \e[1;77m[\e[0m\e[1;91m..:..\e[0m\e[1;77m]\e[1;91m                           Version: $version_check \e[0m                             \e[1;77m[\e[0m\e[1;91m..:..\e[0m\e[1;77m]\e[1;93m\e[0m\n"
-  printf "                                \e[1;93m____________________________________________________________________________________\e[0m\n\n"
-  printf "                                          \e[1;77m[\e[0m\e[1;91m..:..\e[0m\e[1;77m]\e[1;77m     MODERN OR OLD, NETBIOS SCAN TO THE RESCUE    \e[0m\e[1;77m[\e[0m\e[1;91m..:..\e[0m\e[1;77m]\e[1;93m\e[0m\n"
-  printf "                                \e[1;93m____________________________________________________________________________________\e[0m\n"
+  printf "                              \e[1;77m[\e[0m\e[1;35m..:..\e[0m\e[1;77m]\e[1;33m          Recon tool created by: Farzan Nobi [Zero_Prime9]\e[0m            \e[1;77m[\e[0m\e[1;35m..:..\e[0m\e[1;77m]\e[1;93m\e[0m\n"
+  printf "                              \e[1;77m[\e[0m\e[1;35m..:..\e[0m\e[1;77m]\e[1;33m           Follow me on Instagram and Twitter: @Zero_Prime9\e[0m           \e[1;77m[\e[0m\e[1;35m..:..\e[0m\e[1;77m]\e[1;93m\e[0m\n"
+  printf "                              \e[1;77m[\e[0m\e[1;35m..:..\e[0m\e[1;77m]\e[1;36m        Github: https://www.github.com/ZeroPrime9/Nmap_ToolK1t        \e[0m\e[1;77m[\e[0m\e[1;35m..:..\e[0m\e[1;77m]\e[1;93m\e[0m\n"
+  printf "                              \e[1;77m[\e[0m\e[1;35m..:..\e[0m\e[1;77m]\e[1;36m                  Visit: https://www.zeroprime9.com                   \e[0m\e[1;77m[\e[0m\e[1;35m..:..\e[0m\e[1;77m]\e[1;93m\e[0m\n"
+  printf "                              \e[1;77m[\e[0m\e[1;91m..:..\e[0m\e[1;77m]\e[1;91m                           Version: $version_check \e[0m                             \e[1;77m[\e[0m\e[1;91m..:..\e[0m\e[1;77m]\e[1;93m\e[0m\n"
+  printf "                              \e[1;93m____________________________________________________________________________________\e[0m\n\n"
+  printf "                                        \e[1;77m[\e[0m\e[1;91m..:..\e[0m\e[1;77m]\e[1;77m     MODERN OR OLD, NETBIOS SCAN TO THE RESCUE    \e[0m\e[1;77m[\e[0m\e[1;91m..:..\e[0m\e[1;77m]\e[1;93m\e[0m\n"
+  printf "                              \e[1;93m____________________________________________________________________________________\e[0m\n"
 
 }
 
@@ -35,7 +35,9 @@ User_Input_Netbios() #User Input for Netbios and Nikto
     echo " "
     while [[ "$Conti_NN" == "n" ]];
     do
-
+      echo $'                               \e[96m\e[1;36m ================================================================================'
+      echo $'                                                  \e[1;92m Automatically selected:\e[1;91m IP Address/Website                     \e[0m'
+      echo $'                               \e[96m\e[1;36m ================================================================================'
       read -p $'                                \e[1;92m[\e[0m\e[1;77m::\e[0m\e[1;92m]\e[1;91m Enter Web Address/IP Address: \e[0m' IP_NN_Input
       echo $'                                \e[1;92m[\e[0m\e[1;77m::\e[0m\e[1;92m]\e[1;33m The entered Web Address/IP Address is: \e[0m' $IP_NN_Input
       read -p $'                                \e[1;92m[\e[0m\e[1;77m::\e[0m\e[1;92m]\e[1;33m Do you want to continue with the Web Address/IP Address [y/n]: \e[0m' Conti_NN
@@ -45,7 +47,9 @@ User_Input_Netbios() #User Input for Netbios and Nikto
         Nmap_Netbios_Scan
     else
       echo " "
-      echo $'                                \e[1;77m[\e[0m\e[1;91m::\e[0m\e[1;77m]\e[1;91m =============== Retype =============== \e[0m\e[1;77m[\e[0m\e[1;91m::\e[0m\e[1;77m] \e[0m'
+      echo $'                              \e[96m\e[1;93m  ================================================================================'
+      echo $'                                                   \e[31m            Re-enter your choice'
+      echo $'                              \e[96m\e[1;93m  ================================================================================'
       sleep 2
       echo " "
     fi
@@ -61,16 +65,15 @@ Nmap_Netbios_Scan() #NEtbios Nmap Scan
   Nmap_Netbios_Banner
   echo " "
   Nmap_Netbios_choice=" "
-  echo $'                                \e[96m\e[1;1m =============================================================='
-  echo $'                                \e[31m        Target IP Address: \e[1;1m' $IP_NN_Input
-  echo $'                                \e[36m\e[1;1m =============================================================='
-  echo " "
+  echo $'                              \e[36m ================================================================================'
+  echo $'                                                \e[31m        Target IP Address: \e[1;1m' $IP_NN_Input
+  echo $'                              \e[36m ================================================================================'
   echo " "
   echo $'                                \e[1;92m[\e[0m\e[1;77m1\e[0m\e[1;92m] Nmap NetBios Server Scan\e[0m'
   echo $'                                \e[1;92m[\e[0m\e[1;77m2\e[0m\e[1;92m] Nmap NetBios Enumeration Scan \e[0m'
   echo $'                                \e[1;92m[\e[0m\e[1;77m0\e[0m\e[1;92m]\e[1;91m Back \e[0m'
   echo  " "
-  read -p $'                                \e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Choose scan type [1 or 2]: \e[0m' Nmap_Netbios_choice
+  read -p $'                                \e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Choose scan type [1-2 or 0]: \e[0m' Nmap_Netbios_choice
 
   file_location_NetBios_Nmap="Scanned_Target/Nmap_NetBios"
   cd ..
@@ -89,13 +92,14 @@ Nmap_Netbios_Scan() #NEtbios Nmap Scan
  case $Nmap_Netbios_choice in
 
    "1" )
-         echo $'\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;33m You have selected:\e[1;91m Nmap NetBios Server Scan \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] \e[0m'
+         echo $'                               \e[96m\e[1;1m =============================================================='
+         echo -e '                                       \e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;33m   We will find you and We will hunt you  \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] \e[0m'
+         echo $'                                       \e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;33m    You have selected:\e[1;91m NBT Server Scan    \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] \e[0m'
+         echo $'                               \e[96m\e[1;1m ==============================================================' 
          if [[ -e $file_loc_NetBios_Server_Scan ]];
          then
              sleep 2
-             echo -e "\e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;33m I will FIND you, I will HUNT you and I will HACK you\e[0m"
-             echo " "
-             echo -e "\e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m The Scanning has started...\e[0m"
+             echo -e "                                       \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m The Scanning has started...\e[0m"
              echo " " >> $file_loc_NetBios_Server_Scan
              echo "==============================" >> $file_loc_NetBios_Server_Scan
              echo $(date) >> $file_loc_NetBios_Server_Scan
@@ -104,18 +108,18 @@ Nmap_Netbios_Scan() #NEtbios Nmap Scan
              nmap -sV -v -p 139,445 $IP_NN_Input    >> $file_loc_NetBios_Server_Scan
              echo "==============================" >> $file_loc_NetBios_Server_Scan
              sleep 3
-             echo -e "\e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m Reading Log File.."
+             echo -e "                                       \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m Reading Log File.."
              echo " "
              cat $file_loc_NetBios_Server_Scan
              echo " "
-             echo -e "\e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;92m The Scan is Complete.\e[0m"
-             echo -e "\e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;92m View Scanned_Target/Nmap_NetBios/ for more Information\e[0m"
-             echo -e "\e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;92m Check the date and time to see the latest scan\e[0m"
+             echo -e "                                       \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;92m The Scan is Complete.\e[0m"
+             echo -e "                                       \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;92m View Scanned_Target/Nmap_NetBios/ for more Information\e[0m"
+             echo -e "                                       \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;92m Check the date and time to see the latest scan\e[0m"
 
            else
-             echo -e "\e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m Running First NetBios Scan Setup\e[0m"
+             echo -e "                                       \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m Running First NetBios Scan Setup\e[0m"
              sleep 4
-             echo -e "\e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m The Scanning has started...\e[0m"
+             echo -e "                                       \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m The Scanning has started...\e[0m"
                cd Scanned_Target/Nmap_NetBios
                touch NNB_Server_Scan.log
                echo "==============================" >> NNB_Server_Scan.log
@@ -127,20 +131,21 @@ Nmap_Netbios_Scan() #NEtbios Nmap Scan
                echo " "
                cat NNB_Server_Scan.log
                echo " "
-               echo -e "\e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;92m The Scan is Complete.\e[0m"
-               echo -e "\e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;92m View Scanned_Target/Nmap_NetBios/ for more Information\e[0m"
-               echo -e "\e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;92m Check the date and time to see the latest scan\e[0m"
+               echo -e "                                       \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;92m The Scan is Complete.\e[0m"
+               echo -e "                                       \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;92m View Scanned_Target/Nmap_NetBios/ for more Information\e[0m"
+               echo -e "                                       \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;92m Check the date and time to see the latest scan\e[0m"
                fi
      ;;
 
      "2")
-        echo $'\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;33m You have selected:\e[1;91m  Nmap NetBios Enumeration Scan \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] '
+         echo $'                               \e[96m\e[1;1m =============================================================='
+         echo -e '                                       \e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;33m  Facts 101: Linux is better than Windows \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] \e[0m'
+         echo $'                                       \e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;33m  You have selected:\e[1;91m NBT Enumeration Scan \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] \e[0m'
+         echo $'                               \e[96m\e[1;1m ==============================================================' 
         if [[ -e $file_loc_NetBios_Server_Enum ]];
         then
          sleep 2
-         echo -e "\e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;33m Let me let you on a secret, Linux is better then Windows.\e[0m"
-         echo " "
-         echo -e "\e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m The Scanning has started...\e[0m"
+         echo -e "                                       \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m The Scanning has started...\e[0m"
          echo " " >> $file_loc_NetBios_Server_Enum
          echo "==============================" >> $file_loc_NetBios_Server_Enum
          echo $(date) >> $file_loc_NetBios_Server_Enum
@@ -149,18 +154,18 @@ Nmap_Netbios_Scan() #NEtbios Nmap Scan
          nmap -sU --script nbstat.nse -p 137 $IP_NN_Input >> $file_loc_NetBios_Server_Enum
          echo "==============================" >> $file_loc_NetBios_Server_Enum
          sleep 3
-         echo -e "\e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m Reading Log File\e[0m "
+         echo -e "                                       \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m Reading Log File\e[0m "
          echo " "
          cat $file_loc_NetBios_Server_Enum
          echo " "
-         echo -e "\e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;92m The Scan is Complete.\e[0m"
-         echo -e "\e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;92m View Scanned_Target/Nmap_NetBios/ for more Information\e[0m"
-         echo -e "\e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;92m Check the date and time to see the latest scan\e[0m"
+         echo -e "                                       \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;92m The Scan is Complete.\e[0m"
+         echo -e "                                       \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;92m View Scanned_Target/Nmap_NetBios/ for more Information\e[0m"
+         echo -e "                                       \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;92m Check the date and time to see the latest scan\e[0m"
 
        else
-         echo -e "\e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m Running First Time Nikto Setup \e[0m"
+         echo -e "                                       \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m Running First Time Nikto Setup \e[0m"
          sleep 4
-         echo -e "\e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m The Scanning has started\e[0m"
+         echo -e "                                       \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m The Scanning has started\e[0m"
            cd Scanned_Target/Nmap_NetBios
            touch NNB_Server_Enumeratiom.log
            echo "==============================" >> NNB_Server_Enumeratiom.log
@@ -172,24 +177,57 @@ Nmap_Netbios_Scan() #NEtbios Nmap Scan
            echo " "
            cat NNB_Server_Enumeratiom.log
            echo " "
-           echo -e "\e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;92m The Scan is Complete.\e[0m"
-           echo -e "\e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;92m View Scanned_Target/Nmap_Nikto/ for more Information\e[0m"
-           echo -e "\e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;92m Check the date and time to see the latest scan\e[0m  "
+           echo -e "                                       \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;92m The Scan is Complete.\e[0m"
+           echo -e "                                       \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;92m View Scanned_Target/Nmap_Nikto/ for more Information\e[0m"
+           echo -e "                                       \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;92m Check the date and time to see the latest scan\e[0m  "
            fi
 
            ;;
 
 
   "0")
-      cd ..
-      ./Nmap_ToolK1t.sh
+      clear
+      Nmap_Netbios_Banner
+      EXIT_MENU_CHOICE_NBT="5" # Choice for IP or FILE
+      while [[ "$EXIT_MENU_CHOICE_NBT" -ge "3" ]];
+      do 
+        echo ""
+        echo $'                              \e[1;92m[\e[0m\e[1;77m1\e[0m\e[1;92m] Head back to main menu \e[0m'
+        echo $'                              \e[1;92m[\e[0m\e[1;77m2\e[0m\e[1;92m] Re-enter Target\e[0m'
+        echo $'                              \e[1;92m[\e[0m\e[1;77m0\e[0m\e[1;92m]\e[1;91m Back \e[0m'
+        echo ""
+        read -p $'                              \e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Choose an option: \e[0m' EXIT_MENU_CHOICE_NBT
+        echo " "
+
+        if [ "$EXIT_MENU_CHOICE_NBT" == "1" ]
+          then  
+            pwd
+            ./Nmap_ToolK1t.sh
+        elif [ "$EXIT_MENU_CHOICE_NBT" == "2" ]
+          then 
+              User_Input_Netbios
+        elif [ "$EXIT_MENU_CHOICE_NBT" == "0" ]
+          then
+              Nmap_Netbios_Scan
+        else
+              clear
+              Nmap_Netbios_Banner                   
+              echo $'                     \e[96m\e[1;93m ================================================================================'
+              echo $'                                         \e[31m            Re-enter your choice'
+              echo $'                     \e[96m\e[1;93m ================================================================================'
+        fi 
+      done 
 
       ;;
 
    *)
-     echo $'\e[1;77m[\e[0m\e[1;91m::\e[0m\e[1;77m]\e[1;91m =============== Retype =============== \e[0m\e[1;77m[\e[0m\e[1;91m::\e[0m\e[1;77m] \e[0m'
-     sleep 3
-     Nmap_Netbios_Scan
+      echo " "
+      echo $'                                 \e[96m\e[1;93m  ================================================================================'
+      echo $'                                                      \e[31m            Re-enter your choice'
+      echo $'                                 \e[96m\e[1;93m  ================================================================================'
+      sleep 2
+      echo " "
+      Nmap_Netbios_Scan
 
      ;;
 esac
@@ -200,8 +238,8 @@ EXIT_FUN() #Script underneath after finishing of tool
 {
   echo " "
   echo " "
-  echo -e "                      \e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;35m           Sometimes it's wise to scan before you exploit.           \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] "
-  echo -e "                      \e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;35m           More the information, Easier the scan                     \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] "
+  echo -e "                            \e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;35m           Sometimes it's wise to scan before you exploit.           \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] "
+  echo -e "                            \e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;35m               More the information, Easier the scan                 \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] "
   echo " "
 }
 

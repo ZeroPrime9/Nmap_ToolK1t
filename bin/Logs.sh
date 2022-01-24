@@ -1,6 +1,6 @@
-# !/bin/bash
-# Author: Farzan Nobi Aka Zero_Prime9
-# Nmap_Toolk1t Subtool Log Control System
+#!/bin/bash
+#Author: Farzan Nobi Aka Zero_Prime9
+#Nmap_Toolk1t Subtool Log Control System
 banner() # Introduction Banner
 {
   clear
@@ -52,11 +52,11 @@ Logs_DB()
 
 
   echo $'                      \e[1;92m[\e[0m\e[1;77m1\e[0m\e[1;92m] Clear Logs of Basic Scan\e[0m'
-  echo $'                      \e[1;92m[\e[0m\e[1;77m2\e[0m\e[1;92m] Clear Logs of Advanced Scan                       \e[1;91m      [Will Release in #V3.0 Update]\e[0m'
+  echo $'                      \e[1;92m[\e[0m\e[1;77m2\e[0m\e[1;92m] Clear Logs of Advanced Scan \e[0m'
   echo $'                      \e[1;92m[\e[0m\e[1;77m3\e[0m\e[1;92m] Clear Logs of Firewalls IDS Evasion and Spoofing \e[1;91m   \e[0m'
   echo $'                      \e[1;92m[\e[0m\e[1;77m4\e[0m\e[1;92m] Clear Logs of Nmap NetBios Scan \e[0m'
   echo $'                      \e[1;92m[\e[0m\e[1;77m5\e[0m\e[1;92m] Clear Logs of Nmap Nikto Scan   \e[0m'
-  echo $'                      \e[1;92m[\e[0m\e[1;77m0\e[0m\e[1;92m] Back \e[0m'
+  echo $'                      \e[1;92m[\e[0m\e[1;77m0\e[0m\e[1;92m]\e[1;91m Back \e[0m'
   echo " "
   read -p $'                      \e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Choose which log to clear [1-5 or 0]: \e[0m' log_choice
 
@@ -66,33 +66,37 @@ Logs_DB()
   then
     while [ "$Conti_log" == "n" ]
     do
-      echo    $'\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;33m You have selected:\e[1;91m  Clear Logs of Basic Scan \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[0m'
-      read -p $'\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;33m Do you want to continue with Clearing Logs of Basic Scan [y/n]: \e[0m' Conti_log
-      echo " "
+      echo " " 
+      echo $'                     \e[96m\e[1;1m =================================================================================='
+      echo $'                                \e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;33m   You have selected:\e[1;91m Clear Logs of Basic Scan   \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] \e[0m'
+      echo $'                     \e[96m\e[1;1m ==================================================================================' 
+      read -p $'                      \e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;33m Do you want to continue with Clearing Logs of Basic Scan [y/n]: \e[0m' Conti_log
 
       if [ "$Conti_log" == "n" ]
       then
         Logs_DB
       elif [ "$Conti_log" == "y" ]
       then
+        
         if [ -f $file_basic ]
         then
-          echo $'\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;77m The Logs have been already Cleared  \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] '
-          echo $'\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;77m Taking You Back To Main Screen!     \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] '
+          echo -e "                      \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m The Logs have been cleared\e[0m"
+          echo -e "                      \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m Taking you back to the main menu\e[0m"
           sleep 3
           banner
-          user_input
+          cd .. 
+          ./Nmap_ToolK1t.sh
         else
-          cd Scanned_Target
-          cd Basic_Scan
-          rm *
+          cd ..
+          cd Scanned_Target/Basic_Scan
+          #rm *
           sleep 2
-          echo $'\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;77m The Logs have been cleared  \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] '
-          echo $'\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;92m Taking you to Main Screen!   \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] '
+          echo -e "                      \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m The Logs have been cleared\e[0m"
+          echo -e "                      \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m Taking you back to the main menu\e[0m"
           sleep 6
-          cd ../..
           banner
-          user_input
+          cd ../..
+          ./Nmap_ToolK1t.sh
         fi
 
       else
@@ -105,8 +109,10 @@ Logs_DB()
   then
     while [ "$Conti_log" == "n" ]
     do
-      echo     $'\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;33m You have selected:\e[1;91m  Clear Logs of Advanced Scan \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] '
-      read -p  $'\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;33m Do you want to continue with Clearing Logs of Advanced Scan [y/n]: \e[0m' Conti_log
+      echo $'                     \e[96m\e[1;1m =================================================================================='
+      echo $'                              \e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;33m   You have selected:\e[1;91m Clear Logs of Advanced Scan   \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] \e[0m'
+      echo $'                     \e[96m\e[1;1m ==================================================================================' 
+      read -p  $'                      \e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;33m Do you want to continue with Clearing Logs of Advanced Scan [y/n]: \e[0m' Conti_log
 
       if [ "$Conti_log" == "n" ]
       then
@@ -115,22 +121,22 @@ Logs_DB()
       then
         if [ -f $file_basic ]
         then
-          echo $'\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;77m The Logs have been already Cleared  \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] '
-          echo $'\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;77m Taking You Back To Main Screen!     \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] '
+          echo -e "                      \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m The Logs have been cleared\e[0m"
+          echo -e "                      \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m Taking you back to the main menu\e[0m"
           sleep 3
           banner
           user_input
         else
-          cd Scanned_Target
-          cd Advanced_Scan
-          rm *
+          cd .. 
+          cd Scanned_Target/Advanced_Scan
+          #rm *
           sleep 2
-          echo $'\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;77m The Logs have been cleared  \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] '
-          echo $'\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;92m Taking you to Main Screen!  \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] '
+          echo -e "                      \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m The Logs have been cleared\e[0m"
+          echo -e "                      \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m Taking you back to the main menu\e[0m"
           sleep 6
-          cd ../..
           banner
-          user_input
+          ./Nmap_ToolK1t.sh
+
         fi
 
       else
@@ -143,8 +149,10 @@ Logs_DB()
   then
     while [ "$Conti_log" == "n" ]
     do
-      echo     $'\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;33m You have selected:\e[1;91m  Clear Logs of Firewalls IDS Evasion and Spoofing \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] '
-      read -p  $'\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;33m Do you want to continue with Clearing Logs of Firewalls IDS Evasion and Spoofing [y/n]: \e[0m' Conti_log
+      echo $'                     \e[96m\e[1;1m =================================================================================='
+      echo $'                                        \e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;33m   You have selected:\e[1;91m FIES Logs  \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] \e[0m'
+      echo $'                     \e[96m\e[1;1m ==================================================================================' 
+      read -p  $'                      \e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;33m Do you want to continue with Clearing Logs of FIES [y/n]: \e[0m' Conti_log
 
       if [ "$Conti_log" == "n" ]
       then
@@ -153,25 +161,27 @@ Logs_DB()
       then
         if [ -f $file_FIES ]
         then
-          echo $'\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;77m The Logs have been already Cleared  \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] '
-          echo $'\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;77m Taking You Back To Main Screen!     \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] '
+          echo -e "                      \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m The Logs have been already cleared\e[0m"
+          echo -e "                      \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m Taking you back to the main menu\e[0m"
           sleep 3
           banner
           user_input
         else
-          cd Scanned_Target
-          cd Firewall_IES
-          rm *
+          cd ..
+          cd Scanned_Target/Firewall_IES
+          #rm *
           sleep 2
-          echo $'\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;77m The Logs have been cleared  \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] '
-          echo $'\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;92m Taking you to Main Screen!  \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] '
+          echo -e "                      \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m The Logs have been cleared\e[0m"
+          echo -e "                      \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m Taking you back to the main menu\e[0m"
           sleep 6
-          cd ../..
           banner
-          user_input
+          cd ../..
+          ./Nmap_ToolK1t.sh
         fi
       else
-        echo $'\e[1;77m[\e[0m\e[1;91m::\e[0m\e[1;77m]\e[1;91m =============== Invalid Choice =============== \e[0m\e[1;77m[\e[0m\e[1;91m::\e[0m\e[1;77m] \e[0m'
+        echo $'                     \e[96m\e[1;93m ================================================================================'
+        echo $'                                         \e[31m            Re-enter your choice'
+        echo $'                     \e[96m\e[1;93m ================================================================================'
         Logs_DB
       fi
     done
@@ -180,8 +190,10 @@ Logs_DB()
   then
     while [ "$Conti_log" == "n" ]
     do
-      echo     $'\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;33m You have selected:\e[1;91m  Nmap NetBios Scan \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] '
-      read -p  $'\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;33m Do you want to continue with Clearing Logs of Nmap NetBios Scan [y/n]: \e[0m' Conti_log
+      echo $'                     \e[96m\e[1;1m =================================================================================='
+      echo $'                                        \e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;33m   You have selected:\e[1;91m Nmap NetBios Scan  \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] \e[0m'
+      echo $'                     \e[96m\e[1;1m ==================================================================================' 
+      read -p  $'                      \e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;33m Do you want to continue with Clearing Logs of Nmap NetBios Scan [y/n]: \e[0m' Conti_log
 
       if [ "$Conti_log" == "n" ]
       then
@@ -190,35 +202,38 @@ Logs_DB()
       then
         if [ -f $file_Nmap_NetBios ]
         then
-          echo $'\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;77m The Logs have been already Cleared  \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] '
-          echo $'\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;77m Taking You Back To Main Screen!     \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] '
+          echo -e "                      \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m The Logs have been cleared\e[0m"
+          echo -e "                      \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m Taking you back to the main menu\e[0m"
           sleep 3
           banner
           user_input
         else
-          cd Scanned_Target
-          cd Nmap_NetBios
-          rm *
+          cd ..
+          cd Scanned_Target/Nmap_NetBios
+          #rm *
           sleep 2
-          echo $'\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;77m The Logs have been cleared  \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] '
-          echo $'\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;92m Taking you to Main Screen!  \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] '
+          echo -e "                      \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m The Logs have been cleared\e[0m"
+          echo -e "                      \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m Taking you back to the main menu\e[0m"
           sleep 6
           cd ../..
           banner
-          user_input
+          ./Nmap_ToolK1t.sh
         fi
       else
-        echo $'\e[1;77m[\e[0m\e[1;91m::\e[0m\e[1;77m]\e[1;91m =============== Invalid Choice =============== \e[0m\e[1;77m[\e[0m\e[1;91m::\e[0m\e[1;77m] \e[0m'
+        echo $'                     \e[96m\e[1;93m ================================================================================'
+        echo $'                                         \e[31m            Re-enter your choice'
+        echo $'                     \e[96m\e[1;93m ================================================================================'
         Logs_DB
       fi
     done
-
   elif [ "$log_choice" == "5" ]
   then
     while [ "$Conti_log" == "n" ]
     do
-      echo     $'\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;33m You have selected:\e[1;91m  Nmap Nikto Scan \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] '
-      read -p  $'\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;33m Do you want to continue with Clearing Logs of Nmap Nikto Scan [y/n]: \e[0m' Conti_log
+      echo $'                     \e[96m\e[1;1m =================================================================================='
+      echo $'                                        \e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;33m   You have selected:\e[1;91m Nmap Nikto Scan  \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] \e[0m'
+      echo $'                     \e[96m\e[1;1m ==================================================================================' 
+      read -p  $'                      \e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;33m Do you want to continue with Clearing Logs of Nmap Nikto Scan [y/n]: \e[0m' Conti_log
 
       if [ "$Conti_log" == "n" ]
       then
@@ -227,35 +242,39 @@ Logs_DB()
       then
         if [ -f $file_Nmap_Nikto ]
         then
-          echo $'\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;77m The Logs have been already Cleared  \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] '
-          echo $'\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;77m Taking You Back To Main Screen!     \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] '
+          echo -e "                      \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m The Logs have been cleared\e[0m"
+          echo -e "                      \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m Taking you back to the main menu\e[0m"
           sleep 3
           banner
           user_input
         else
-          cd Scanned_Target
-          cd Nmap_Nikto
-          rm *
+          cd ..
+          cd Scanned_Target/Nmap_Nikto
+          #rm *
           sleep 2
-          echo $'\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;77m The Logs have been cleared  \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] '
-          echo $'\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;92m Taking you to Main Screen!  \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] '
+          echo -e "                      \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m The Logs have been cleared\e[0m"
+          echo -e "                      \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m Taking you back to the main menu\e[0m"
           sleep 6
           cd ../..
           banner
-          user_input
+          ./Nmap_ToolK1t.sh
         fi
-      elif [ "$log_choice" == "0" ]
-      then
-        cd ..
-        ./Nmap_ToolK1t.sh
       else
-        echo $'\e[1;77m[\e[0m\e[1;91m::\e[0m\e[1;77m]\e[1;91m =============== Invalid Choice =============== \e[0m\e[1;77m[\e[0m\e[1;91m::\e[0m\e[1;77m] \e[0m'
+        echo $'                     \e[96m\e[1;93m ================================================================================'
+        echo $'                                         \e[31m            Re-enter your choice'
+        echo $'                     \e[96m\e[1;93m ================================================================================'
         Logs_DB
       fi
     done
-
+  elif [ "$log_choice" == "0" ]
+    then  
+        cd ..
+        ./Nmap_ToolK1t.sh
   else
-        echo $'\e[1;77m[\e[0m\e[1;91m::\e[0m\e[1;77m]\e[1;91m =============== Invalid Choice =============== \e[0m\e[1;77m[\e[0m\e[1;91m::\e[0m\e[1;77m] \e[0m'
+      echo $'                     \e[96m\e[1;93m ================================================================================'
+      echo $'                                         \e[31m            Re-enter your choice'
+      echo $'                     \e[96m\e[1;93m ================================================================================'
+      Logs_DB
   fi
 
 }
