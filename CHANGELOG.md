@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## v3.1
+- Made into a single shell file
+- Update on the Logging system
+- Removed the bug where the directory is created outside the ntoolkit directory
+- Updates on Logging UI/UX
+- Added NSE scan & Advanced Scan to the Logging System
+- Package Access Control has been implemeted
+- Single Flow System Implemented
+
+
 ## V3.0
 - Allignment of Basic Scan
 - UI/UX Update on Basic Scan
