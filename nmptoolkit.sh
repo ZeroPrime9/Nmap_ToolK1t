@@ -669,7 +669,7 @@ case $bs_scan_sc in
            echo $'                               \e[96m\e[1;1m =============================================================='
            if [[ -e $file_loc_ping  ]];
            then
-             sleep 4
+             sleep 1
              echo -e "                                       \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m The Scanning has started...   "
              echo " " >> $file_loc_ping
              echo "                                       ==============================" >> $file_loc_ping
@@ -712,14 +712,12 @@ case $bs_scan_sc in
           # Setup for Service_Detection_Scan
       "2" )  
              echo $'                               \e[96m\e[1;1m =============================================================='
-             echo -e '                                     \e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;33m  Hacking is simple yet complicated puzzle  \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] \e[0m'
+             echo -e '                                     \e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;33m   Its all about Old versions and Exploits  \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] \e[0m'
              echo $'                                     \e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;33m  You have selected:\e[1;91m Service Detection Scan \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] \e[0m'
              echo $'                               \e[96m\e[1;1m =============================================================='
              if [[ -e $file_loc_sV ]];
              then
-               sleep 2
-               echo -e "                                     \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;33m \e[0m"
-               sleep 4
+               sleep 1
                echo -e "                                     \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m The Scanning has started...\e[0m"
                echo " " >> $file_loc_sV
                echo "==============================" >> $file_loc_sV
@@ -760,13 +758,12 @@ case $bs_scan_sc in
 
              # Setup for Common_Port_Scan
           "3" ) echo $'                               \e[96m\e[1;1m =============================================================='
-                echo -e '                                     \e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;33m  Hacking is simple yet complicated puzzle  \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] \e[0m'
+                echo -e '                                     \e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;33m       An Open Port is an Open Access       \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] \e[0m'
                 echo $'                                     \e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;33m    You have selected:\e[1;91m Common Port Scan     \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] \e[0m'
                 echo $'                               \e[96m\e[1;1m =============================================================='
                 if [[ -e $file_loc_port ]];
                 then
-                    sleep 2
-                    echo -e "                                     \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;33m An open port is an open access.\e[0m"
+                    sleep 1
                     echo -e "                                     \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m The Scanning has started...\e[0m"
                     echo " " >> $file_loc_port
                     echo "==============================" >> $file_loc_port
@@ -785,7 +782,7 @@ case $bs_scan_sc in
 
                 else
                     echo -e "                                     \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m Running First Scan Setup\e[0m"
-                    sleep 4
+                    sleep 1
                     echo -e "                                     \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m The Scanning has started...\e[0m"
                     cd Scanned_Target/Basic_Scan
                     touch Common_Port_Scan.log
@@ -807,13 +804,12 @@ case $bs_scan_sc in
 
                      # Setup for Fast_Scan
               "4" ) echo $'                               \e[96m\e[1;1m =============================================================='
-                    echo -e '                                     \e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;33m  Hacking is simple yet complicated puzzle  \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] \e[0m'
+                    echo -e '                                     \e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;33m Getting Information Faster is always Nice  \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] \e[0m'
                     echo $'                                     \e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;33m       You have selected:\e[1;91m Fast Scan         \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] \e[0m'
                     echo $'                               \e[96m\e[1;1m =============================================================='
                     if [[ -e $file_loc_fast ]];
                     then
-                         sleep 2
-                         echo -e "                                     \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;33m Need information faster, this is it\e[0m"
+                         sleep 1
                          echo -e "                                     \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m The Scanning has started... \e[0m"
                          echo " " >> $file_loc_fast
                          echo "==============================" >> $file_loc_fast
@@ -832,7 +828,7 @@ case $bs_scan_sc in
 
                      else
                        echo -e "                                     \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m Running First Scan Setup\e[0m"
-                       sleep 4
+                       sleep 1
                         echo -e "                                     \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m The Scanning has started...\e[0m"
                          cd Scanned_Target/Basic_Scan
                          touch Fast_Scan.log
@@ -853,13 +849,12 @@ case $bs_scan_sc in
                ;; #End of setup for Fast_Scan
 
               "5" )  echo $'                               \e[96m\e[1;1m =============================================================='
-                     echo -e '                                     \e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;33m  Hacking is simple yet complicated puzzle  \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] \e[0m'
+                     echo -e '                                     \e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;33m  The Quiter You Are, The More You Hear!    \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] \e[0m'
                      echo $'                                     \e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;33m      You have selected:\e[1;91m Stealth Scan       \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] \e[0m'
                      echo $'                               \e[96m\e[1;1m =============================================================='
                     if [[ -e $file_loc_sS ]];
                     then
-                        sleep 2
-                        echo -e "                                     \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;33m The Quiter You Are, The More You Hear!\e[0m"
+                        sleep 1
                         echo -e "                                     \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m The Scanning has started...\e[0m"
                         echo " " >> $file_loc_sS
                         echo "==============================" >> $file_loc_sS
@@ -878,7 +873,7 @@ case $bs_scan_sc in
 
                     else
                         echo -e "                                     \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m Running First Scan Setup\e[0m"
-                        sleep 4
+                        sleep 1
                         echo -e "                                     \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m The Scanning has started...\e[0m"
                         cd Scanned_Target/Basic_Scan
                         touch Basic_Stealth_Scan.log
@@ -900,13 +895,12 @@ case $bs_scan_sc in
 
               # Setup for Protocol Support Scan
               "6" )  echo $'                               \e[96m\e[1;1m =============================================================='
-                     echo -e '                                     \e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;33m  Hacking is simple yet complicated puzzle  \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] \e[0m'
+                     echo -e '                                     \e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;33m      Who said finding protocol was hard    \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] \e[0m'
                      echo $'                                     \e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;33m  You have selected:\e[1;91m Protocol Support Scan  \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] \e[0m'
                      echo $'                               \e[96m\e[1;1m =============================================================='
                     if [[ -e $file_loc_protocol ]];
                     then
                         sleep 2
-                        echo -e "                                     \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;33m Who said finding protocol was hard\e[0m"
                         echo -e "                                     \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m The Scanning has started... \e[0m"
                         echo " " >> $file_loc_protocol
                         echo "==============================" >> $file_loc_protocol
@@ -925,7 +919,7 @@ case $bs_scan_sc in
 
                     else
                       echo -e "                                     \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m Running First Scan Setup\e[0m"
-                      sleep 4
+                      sleep 1
                        echo -e "                                     \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m The Scanning has started...\e[0m"
                         cd Scanned_Target/Basic_Scan
                         touch Protocol_Support_Scan.log
@@ -947,13 +941,12 @@ case $bs_scan_sc in
 
               #Setup for TCP_Scan
               "7" )  echo $'                               \e[96m\e[1;1m =============================================================='
-                     echo -e '                                     \e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;33m  Hacking is simple yet complicated puzzle  \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] \e[0m'
+                     echo -e '                                     \e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;33m  Data, a lot of data. Money a lot of Money \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] \e[0m'
                      echo $'                                     \e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;33m      You have selected:\e[1;91m TCP Scan           \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] \e[0m'
                      echo $'                               \e[96m\e[1;1m =============================================================='
                     if [[ -e $file_loc_tcp ]];
                     then
-                        sleep 2
-                        echo -e "                                     \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;33m Data, a lot of data. Money a lot of Money .\e[0m"
+                        sleep 1
                         echo -e "                                     \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m The Scanning has started...\e[0m"
                         echo " " >> $file_loc_tcp
                         echo "==============================" >> $file_loc_tcp
@@ -972,7 +965,7 @@ case $bs_scan_sc in
 
                     else
                         echo -e "                                     \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m Running First Scan Setup\e[0m"
-                        sleep 4
+                        sleep 1
                         echo -e "                                     \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m The Scanning has started...\e[0m"
                         cd Scanned_Target/Basic_Scan
                         touch TCP_Scan.log
@@ -993,13 +986,12 @@ case $bs_scan_sc in
 
               #Setup for UDP_Scan
               "8" )  echo $'                               \e[96m\e[1;1m =============================================================='
-                     echo -e '                                     \e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;33m  Hacking is simple yet complicated puzzle  \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] \e[0m'
+                     echo -e '                                     \e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;33m   Stream all you want, but i am not paying \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] \e[0m'
                      echo $'                                     \e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;33m      You have selected:\e[1;91m UDP Scan           \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] \e[0m'
                      echo $'                               \e[96m\e[1;1m =============================================================='
                     if [[ -e $file_loc_udp ]];
                     then
-                        sleep 2
-                        echo -e "                                     \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;33m Stream all you want, but i am not paying ;)\e[0m"
+                        sleep 1
                         echo -e "                                     \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m The Scanning has started...\e[0m"
                         echo " " >> $file_loc_udp
                         echo "==============================" >> $file_loc_udp
@@ -1041,13 +1033,12 @@ case $bs_scan_sc in
 
                 #Setup for Ping Scan without Port Scanner
               "9" )  echo $'                               \e[96m\e[1;1m =============================================================='
-                     echo -e '                                  \e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;33m     Hacking is simple yet complicated puzzle    \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] \e[0m'
+                     echo -e '                                  \e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;33m                    FBI Open UP!                 \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] \e[0m'
                      echo $'                                  \e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m]\e[1;33m You have selected:\e[1;91m Ping Scan with port disabled \e[0m\e[1;77m[\e[0m\e[1;92m::\e[0m\e[1;77m] \e[0m'
                      echo $'                               \e[96m\e[1;1m =============================================================='
                     if [[ -e $file_loc_pingport ]];
                     then
-                        sleep 2
-                        echo -e "                                  \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;33m FBI Open UP! \e[0m"
+                        sleep 1
                         echo -e "                                  \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m The Scanning has started...\e[0m"
                         echo " " >> $file_loc_pingport
                         echo "==============================" >> $file_loc_pingport
@@ -1066,7 +1057,7 @@ case $bs_scan_sc in
 
                     else
                         echo -e "                                  \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m Running First Scan Setup"
-                        sleep 4
+                        sleep 1
                         echo -e "                                  \e[1;77m[\e[0m\e[1;92m*\e[0m\e[1;77m]\e[1;97m The Scanning has started.."
                         cd Scanned_Target/Basic_Scan
                         touch Ping_Scan_Port_Disabled_Scan.log

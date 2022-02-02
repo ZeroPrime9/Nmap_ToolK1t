@@ -8,6 +8,8 @@
 - Added NSE scan & Advanced Scan to the Logging System
 - Package Access Control has been implemeted
 - Single Flow System Implemented
+- Basic Scan Motto has been updated and changed into the header
+- UI Changes to Basic Scan
 
 
 ## V3.0
