@@ -1,5 +1,27 @@
 # CHANGELOG
 
+## V3.0
+- Allignment of Basic Scan
+- UI/UX Update on Basic Scan
+- Change in addition of file
+- Change in UI/UX Main Menu
+- Allignment of FIES Scan
+- UI/UX Update on FIES Main Menu
+- Implemented newer building block
+- FIES Sub-menu Allignment done
+- Nmap_NBT Sub-menu allignment done
+- Nmap_Nikto Sub-menu allighment done
+- Basic Scan Invalid Option on the Select file or Ip address has been shifted to the newest building block
+- Logs UI/UX Updated and working updated
+- Logo Changed for Nmap_Netbios to Nmap_NBT_Scan
+- Menu Exit created for all sections
+- Root access only mode has been enabled
+- Nmap Version has been added to the main code
+- Removing Decoy Scan due to light instability
+- Auto terminal resizing
+- Logging alignment
+- Changede Update UI and Updation method
+
 ## V2.3
 
 - V2.3 Changes made to the UI
