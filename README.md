@@ -1,4 +1,4 @@
-![Nmap_ToolK1t Screenshot](Screenshots/Nmap_ToolK1t-V2.png)
+![Nmap_ToolK1t Screenshot](Screenshots/Nmap_ToolK1t-V3.png)
 
 # About Nmap_ToolK1t
 
@@ -6,7 +6,7 @@ Nmap is an advanced scanning tool used by various Security Testers all around th
 Current Version Version 3.1
 
 
-s
+
 ## Getting Started:
 ```
 git clone https://github.com/ZeroPrime9/Nmap_ToolK1t
