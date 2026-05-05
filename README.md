@@ -40,8 +40,4 @@ There are some known issues found in machines in linux distributions other than 
 
 * **Zero_Prime9** - *Farzan Mohammed* -(https://github.com/ZeroPrime9)
 
-## Donation:
-Any type of donation would be accepted, Working on an Open Source tool requires a lot of time and dedication. So if you are willing to share $1 or more it would really be appreciated
-https://www.paypal.me/fz2050
-
 ### It would be appreciated if you gave credit when redistributing versions of this code, modified or unmodified, source code or executable :)
